@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="flex">
+    <div className="flex bg-black text-white min-h-screen">
       {/* Sidebar */}
-      <div className="w-64 min-h-screen bg-gray-100 p-4">
+      <div className="w-64 bg-gray-800 p-4">
         <h2 className="text-lg font-bold mb-4">Navigation</h2>
         <ul>
           <li className="mb-2"><Link href="/" className="hover:underline">Home</Link></li>
@@ -18,7 +18,6 @@ export default function Home() {
       
       {/* Main content */}
       <div className="flex-1 p-4">
-        Under Construction
       </div>
     </div>
   );
