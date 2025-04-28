@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import CellularAutomata from "@/components/cellular-automata"
+import CellularAutomata from "@/components/contribution-graph"
 
 export default function Home() {
   const techs = [

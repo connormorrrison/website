@@ -89,7 +89,7 @@ export default function ContributionGraph() {
 
   /* ── render ─ */
   return (
-    <div className="w-full max-w-5xl">
+    <div className="w-full flex justify-center">
       <canvas
         ref={canvasRef}
         style={{ width: `${width}px`, height: `${height}px` }}
