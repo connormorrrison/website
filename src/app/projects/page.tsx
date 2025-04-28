@@ -36,7 +36,7 @@ export default function ProjectsPage() {
             "
           >
             <div>
-              <h2 className="text-xl font-semibold mb-2">{proj.title}</h2>
+              <h2 className="text-xl font-medium mb-2">{proj.title}</h2>
               <p className="text-sm">{proj.description}</p>
             </div>
             <div className="mt-4 flex space-x-4 text-blue-600">

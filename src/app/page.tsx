@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import CellularAutomata from "@/components/cellular-automata"
 
 export default function Home() {
   const techs = [
@@ -28,17 +29,6 @@ export default function Home() {
         px-8
       "
     >
-      {/* Hero image */}
-      <div className="w-full max-w-4xl overflow-hidden rounded-lg">
-        <Image
-          src="/hero.jpg"
-          alt="Colorful mosaic of swimmers"
-          width={1500}
-          height={500}
-          className="w-full h-auto object-cover"
-        />
-      </div>
-
       {/* 1. Heading */}
       <h1 className="text-5xl font-normal text-center">
         Hi, I’m Connor
@@ -101,6 +91,8 @@ export default function Home() {
           GitHub ↗
         </Link>
       </div>
+
+      <CellularAutomata />
     </div>
   )
 }
