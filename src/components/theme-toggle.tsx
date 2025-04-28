@@ -1,4 +1,3 @@
-// src/components/theme-toggle.tsx
 "use client"
 
 import { useTheme } from "next-themes"
@@ -10,18 +9,12 @@ export function ThemeToggle() {
   const { theme, setTheme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
-  // wait until after hydration
   useEffect(() => {
     setMounted(true)
   }, [])
 
-  // render nothing on the server (or until mounted) so there's
-  // no mismatch between SSR HTML and the first client paint
-  if (!mounted) {
-    return null
-  }
+  if (!mounted) return null
 
-  // choose the icon based on the actual resolved theme
   const isDark = resolvedTheme === "dark"
 
   return (
@@ -29,13 +22,10 @@ export function ThemeToggle() {
       variant="outline"
       size="icon"
       aria-label="Toggle theme"
+      className="rounded-full w-10 h-10 flex items-center justify-center"
       onClick={() => setTheme(isDark ? "light" : "dark")}
     >
-      {isDark ? (
-        <Sun className="w-5 h-5" />
-      ) : (
-        <Moon className="w-5 h-5" />
-      )}
+      {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
     </Button>
   )
 }
