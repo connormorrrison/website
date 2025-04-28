@@ -8,8 +8,8 @@ export default function ContributionGraph() {
   const cellSize = 10
   const cellGap = 4 // gap between tiles
   const outerPad = 8 // true border margin
-  const width = cols * (cellSize + cellGap) + outerPad * 2 - cellGap // subtract one gap at the end
-  const height = rows * (cellSize + cellGap) + outerPad * 2 - cellGap // subtract one gap at the end
+  const width = cols * (cellSize + cellGap) + outerPad * 2 - cellGap
+  const height = rows * (cellSize + cellGap) + outerPad * 2 - cellGap
 
   /* ── state / refs ─ */
   const [cells, setCells] = useState<any[]>([])
@@ -25,7 +25,7 @@ export default function ContributionGraph() {
           x: outerPad + x * (cellSize + cellGap),
           y: outerPad + y * (cellSize + cellGap),
           opacity: Math.random() * 0.7 + 0.1,
-          pulseSpeed: Math.random() * 0.02 + 0.005,
+          pulseSpeed: (Math.random() * 0.02 + 0.005) * 0.5, // slowed
           pulseDir: Math.random() > 0.5 ? 1 : -1,
           base: Math.random() > 0.85
             ? Math.random() > 0.5 ? 0.9 : 0.6
@@ -61,6 +61,7 @@ export default function ContributionGraph() {
   /* ── animation loop ─ */
   useEffect(() => {
     if (!cells.length) return
+
     const canvas = canvasRef.current!
     const ctx = canvas.getContext("2d")!
     const dpr = window.devicePixelRatio || 1
@@ -83,8 +84,14 @@ export default function ContributionGraph() {
       setCells(next)
       requestRef.current = requestAnimationFrame(animate)
     }
+
     requestRef.current = requestAnimationFrame(animate)
-    return () => requestRef.current && cancelAnimationFrame(requestRef.current)
+
+    return () => {
+      if (requestRef.current !== null) {
+        cancelAnimationFrame(requestRef.current)
+      }
+    }
   }, [cells])
 
   /* ── render ─ */
