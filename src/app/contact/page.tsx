@@ -8,7 +8,7 @@ export default function ContactPage() {
       <h1 className="text-3xl font-normal">Contact</h1>
 
       <p className="text-lg">
-        I’d love to hear from you. If you have a question, want to collaborate, or simply say hi, feel free to reach out.
+        I’d love to connect. If you have a question, want to collaborate, or simply say hi, feel free to reach out.
       </p>
 
       <ul className="space-y-2 text-lg">

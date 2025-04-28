@@ -13,7 +13,7 @@ export default function SocialLinks() {
         variant="outline"
         size="icon"
         aria-label="Email"
-        className="rounded-full w-10 h-10 flex items-center justify-center"
+        className="rounded-full w-10 h-10 flex items-center justify-center text-blue-600"
       >
         <a href="mailto:cm4@ualberta.ca">
           <Mail className="w-5 h-5" />
@@ -26,7 +26,7 @@ export default function SocialLinks() {
         variant="outline"
         size="icon"
         aria-label="LinkedIn"
-        className="rounded-full w-10 h-10 flex items-center justify-center"
+        className="rounded-full w-10 h-10 flex items-center justify-center text-blue-600"
       >
         <a
           href="https://www.linkedin.com/in/connormorrrison/"
@@ -43,7 +43,7 @@ export default function SocialLinks() {
         variant="outline"
         size="icon"
         aria-label="GitHub"
-        className="rounded-full w-10 h-10 flex items-center justify-center"
+        className="rounded-full w-10 h-10 flex items-center justify-center text-blue-600"
       >
         <a
           href="https://github.com/connormorrrison"
