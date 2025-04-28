@@ -2,6 +2,7 @@
 import "./globals.css"
 import Sidebar from "@/components/sidebar"
 import { ThemeProvider } from "@/components/theme-provider"
+import PageTransition from "@/components/page-transition"
 
 export const metadata = {
   title: "Connor Morrison",
@@ -21,7 +22,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           <Sidebar />
           <main className="flex-1 p-8">
-            {children}
+            <PageTransition>
+              {children}
+            </PageTransition>
           </main>
         </ThemeProvider>
       </body>
