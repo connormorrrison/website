@@ -25,11 +25,16 @@ export default function ContributionGraph() {
           x: outerPad + x * (cellSize + cellGap),
           y: outerPad + y * (cellSize + cellGap),
           opacity: Math.random() * 0.7 + 0.1,
-          pulseSpeed: (Math.random() * 0.02 + 0.005) * 0.5, // slowed
+          pulseSpeed: (Math.random() * 0.02 + 0.005) * 0.5,
           pulseDir: Math.random() > 0.5 ? 1 : -1,
-          base: Math.random() > 0.85
-            ? Math.random() > 0.5 ? 0.9 : 0.6
-            : Math.random() > 0.5 ? 0.3 : 0.1,
+          base:
+            Math.random() > 0.85
+              ? Math.random() > 0.5
+                ? 0.9
+                : 0.6
+              : Math.random() > 0.5
+              ? 0.3
+              : 0.1,
         })
       }
     }
@@ -86,11 +91,8 @@ export default function ContributionGraph() {
     }
 
     requestRef.current = requestAnimationFrame(animate)
-
     return () => {
-      if (requestRef.current !== null) {
-        cancelAnimationFrame(requestRef.current)
-      }
+      if (requestRef.current !== null) cancelAnimationFrame(requestRef.current)
     }
   }, [cells])
 
@@ -99,8 +101,11 @@ export default function ContributionGraph() {
     <div className="w-full flex justify-center">
       <canvas
         ref={canvasRef}
-        style={{ width: `${width}px`, height: `${height}px` }}
-        className="rounded-md shadow-md"
+        style={{
+          width: `${width}px`,
+          height: `${height}px`,
+          border: "none",
+        }}
       />
     </div>
   )
