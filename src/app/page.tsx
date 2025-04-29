@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import CellularAutomata from "@/components/contribution-graph"
+import ContributionGraph from "@/components/contribution-graph"
 
 export default function Home() {
   const techs = [
@@ -92,7 +92,7 @@ export default function Home() {
         </Link>
       </div>
 
-      <CellularAutomata />
+      <ContributionGraph />
     </div>
   )
 }
