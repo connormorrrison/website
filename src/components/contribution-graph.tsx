@@ -8,7 +8,7 @@ export default function ContributionGraph() {
   const cellSize = 10
   const cellGap = 4 // gap between tiles
   const outerPad = 8 // true border margin
-  const width = cols * (cellSize + cellGap) + outerPad * 2 - cellGap
+  const width = cols * (cellSize + cellGap) + outerPad * 2 - cellGap - 130
   const height = rows * (cellSize + cellGap) + outerPad * 2 - cellGap
 
   /* ── state / refs ─ */
