@@ -56,7 +56,7 @@ export default function AboutPage() {
       <div className="w-full">
         <h2 className="text-xl font-normal mb-3">Libraries & Frameworks</h2>
         <div className="flex flex-wrap gap-2">
-          {["React", "Next.js", "Tailwind CSS", "Pandas", "NumPy", "Matplotlib", "SciPy", "SciKit-Learn"].map((lib) => (
+          {["React", "Next.js", "Tailwind CSS", "FastAPI", "Pandas", "NumPy", "Matplotlib", "SciPy", "SciKit-Learn"].map((lib) => (
             <Badge key={lib} text={lib} />
           ))}
         </div>

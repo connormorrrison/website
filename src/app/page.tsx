@@ -3,14 +3,21 @@
 import Image from "next/image"
 import Link from "next/link"
 import ContributionGraph from "@/components/contribution-graph"
+import React from "react"
+
+const Badge = ({ text }: { text: string }) => (
+  <span className="px-3 py-1 rounded-full text-base font-normal bg-white dark:bg-zinc-800 text-gray-800 dark:text-gray-100 border border-gray-300 dark:border-zinc-700">
+    {text}
+  </span>
+)
 
 export default function Home() {
   const techs = [
-    "Python",
     "TypeScript",
     "React",
     "Next.js",
     "Tailwind CSS",
+    "Python",
     "FastAPI",
     "PostgreSQL",
     "Git",
@@ -36,10 +43,10 @@ export default function Home() {
 
       {/* 2. Intro paragraph */}
       <p className="max-w-prose text-lg text-left">
-        I’m an aspiring software engineer passionate about computer science,
-        financial markets, and startups. I studied at both the University of
-        Alberta and the University of the Saskatchewan, building a strong foundation
-        in full-stack development, data analysis, and project management.
+        I’m an aspiring software engineer building at the intersection of 
+        computer science and finance. I studied at both the University of 
+        Alberta and University of Saskatchewan. Focused on full-stack development, 
+        data analysis, and fintech applications.
       </p>
 
       {/* 3. Button row */}
@@ -58,19 +65,17 @@ export default function Home() {
         </Link>
       </div>
 
-      {/* 4. Tech stack (left-aligned) */}
+      {/* 4. Tech stack */}
       <div className="w-full">
         <h2 className="text-2xl font-medium text-left mb-4">Tech Stack</h2>
         <div className="flex flex-wrap justify-start gap-3">
-          {techs.map((t) => (
-            <span key={t} className="px-3 py-1 border rounded">
-              {t}
-            </span>
+          {techs.map((tech) => (
+            <Badge key={tech} text={tech} />
           ))}
         </div>
       </div>
 
-      {/* 5. Contribution graph with extra top margin */}
+      {/* 5. Contribution graph */}
       <div className="w-full mt-10">
         <ContributionGraph />
       </div>

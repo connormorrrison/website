@@ -2,21 +2,21 @@
 import React, { useEffect, useState, useRef } from "react"
 
 export default function ContributionGraph() {
-  /* ── configuration ─ */
+  // configuration
   const cols = 80
   const rows = 7
   const cellSize = 10
-  const cellGap = 4 // gap between tiles
-  const outerPad = 8 // true border margin
+  const cellGap = 4
+  const outerPad = 8
   const width = cols * (cellSize + cellGap) + outerPad * 2 - cellGap - 130
   const height = rows * (cellSize + cellGap) + outerPad * 2 - cellGap
 
-  /* ── state / refs ─ */
+  // state / refs
   const [cells, setCells] = useState<any[]>([])
   const requestRef = useRef<number | null>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
-  /* ── init grid ─ */
+  // init grid
   useEffect(() => {
     const init: any[] = []
     for (let y = 0; y < rows; y++) {
@@ -41,7 +41,7 @@ export default function ContributionGraph() {
     setCells(init)
   }, [])
 
-  /* ── rounded-rect helper ─ */
+  // rounded-rect helper
   const roundRect = (
     ctx: CanvasRenderingContext2D,
     x: number,
@@ -63,7 +63,7 @@ export default function ContributionGraph() {
     ctx.fill()
   }
 
-  /* ── animation loop ─ */
+  // animation loop
   useEffect(() => {
     if (!cells.length) return
 
@@ -96,9 +96,9 @@ export default function ContributionGraph() {
     }
   }, [cells])
 
-  /* ── render ─ */
+  // render
   return (
-    <div className="w-full flex justify-center">
+    <div className="w-full flex justify-start">
       <canvas
         ref={canvasRef}
         style={{
