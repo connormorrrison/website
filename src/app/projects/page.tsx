@@ -6,7 +6,7 @@ const projects = [
     title: "MockTrade",
     description:
       "Full-stack trading simulator with real-time data, JWT auth, and interactive dashboards.",
-    techs: ["React", "TypeScript", "FastAPI", "PostgreSQL"],
+    techs: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL"],
     url: "https://www.mocktrade.ca",
     githubUrl: "https://github.com/connormorrrison/MockTrade",
   },
@@ -32,14 +32,14 @@ export default function ProjectsPage() {
               p-4
               rounded-xl
               border border-gray-200
-              shadow-sm
+              shadow-base
               hover:shadow
               transition
               flex flex-col justify-between
             "
           >
             <div>
-              <h2 className="text-xl font-medium mb-2">{proj.title}</h2>
+              <h2 className="text-xl font-normal mb-2">{proj.title}</h2>
               <p className="text-sm mb-2">{proj.description}</p>
               {/* Tech stack */}
               <div className="flex flex-wrap gap-2 mb-4">
