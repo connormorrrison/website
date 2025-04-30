@@ -1,10 +1,12 @@
 "use client"
+import React from "react"
 
 const projects = [
   {
     title: "MockTrade",
     description:
       "Full-stack trading simulator with real-time data, JWT auth, and interactive dashboards.",
+    techs: ["React", "TypeScript", "FastAPI", "PostgreSQL"],
     url: "https://www.mocktrade.ca",
     githubUrl: "https://github.com/connormorrrison/MockTrade",
   },
@@ -12,6 +14,7 @@ const projects = [
     title: "Personal Website",
     description:
       "Next.js + Tailwind CSS portfolio site with dark/light theme toggle and animated transitions.",
+    techs: ["Next.js", "Tailwind CSS", "ShadCN UI"],
     url: "/",
     githubUrl: "https://github.com/connormorrrison/personal-website",
   },
@@ -37,9 +40,20 @@ export default function ProjectsPage() {
           >
             <div>
               <h2 className="text-xl font-medium mb-2">{proj.title}</h2>
-              <p className="text-sm">{proj.description}</p>
+              <p className="text-sm mb-2">{proj.description}</p>
+              {/* Tech stack */}
+              <div className="flex flex-wrap gap-2 mb-4">
+                {proj.techs.map((t) => (
+                  <span
+                    key={t}
+                    className="px-3 py-1 border rounded text-xs"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
             </div>
-            <div className="mt-4 flex space-x-4 text-blue-600">
+            <div className="mt-2 flex space-x-4 text-blue-600">
               <a
                 href={proj.url}
                 target={proj.url.startsWith("http") ? "_blank" : undefined}

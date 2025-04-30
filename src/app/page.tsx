@@ -21,7 +21,7 @@ export default function Home() {
       className="
         flex flex-col
         w-full h-full
-        items-center
+        items-start
         justify-start
         space-y-8
         pt-16
@@ -30,7 +30,7 @@ export default function Home() {
       "
     >
       {/* 1. Heading */}
-      <h1 className="text-5xl font-normal text-center">
+      <h1 className="text-5xl font-normal text-left">
         Hi, I’m Connor
       </h1>
 
@@ -58,10 +58,10 @@ export default function Home() {
         </Link>
       </div>
 
-      {/* 4. Tech stack (centered) */}
+      {/* 4. Tech stack (left-aligned) */}
       <div className="w-full">
-        <h2 className="text-2xl font-semibold text-center mb-4">Tech Stack</h2>
-        <div className="flex flex-wrap justify-center gap-3">
+        <h2 className="text-2xl font-medium text-left mb-4">Tech Stack</h2>
+        <div className="flex flex-wrap justify-start gap-3">
           {techs.map((t) => (
             <span key={t} className="px-3 py-1 border rounded">
               {t}
@@ -70,29 +70,10 @@ export default function Home() {
         </div>
       </div>
 
-      {/* 5. Social links as text + arrow */}
-      <div className="flex space-x-6 text-lg font-normal">
-        <Link
-          href="mailto:cm4@ualberta.ca"
-          className="text-blue-600 hover:underline"
-        >
-          Email ↗
-        </Link>
-        <Link
-          href="https://www.linkedin.com/in/connormorrrison/"
-          className="text-blue-600 hover:underline"
-        >
-          LinkedIn ↗
-        </Link>
-        <Link
-          href="https://github.com/connormorrrison"
-          className="text-blue-600 hover:underline"
-        >
-          GitHub ↗
-        </Link>
+      {/* 5. Contribution graph with extra top margin */}
+      <div className="w-full mt-10">
+        <ContributionGraph />
       </div>
-
-      <ContributionGraph />
     </div>
   )
 }

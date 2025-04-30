@@ -18,12 +18,12 @@ export default function Sidebar() {
   const HOVER_THRESHOLD = 200
 
   const menuItems = [
-    { name: 'Home',     path: '/'        },
-    { name: 'About',    path: '/about'   },
-    { name: 'Projects', path: '/projects'},
-    { name: 'Blog',     path: '/blog'    },
-    { name: 'Books',    path: '/books'   },
-    { name: 'Contact',  path: '/contact' },
+    { name: 'Home',      path: '/'        },
+    { name: 'About',     path: '/about'   },
+    { name: 'Projects',  path: '/projects'},
+    { name: 'Blog',      path: '/blog'    },
+    { name: 'Resources', path: '/resources'    },
+    { name: 'Contact',   path: '/contact' },
   ]
 
   // Toggle pinned state on click (ignoring clicks on links or the theme toggle)
