@@ -36,7 +36,7 @@ export default function ProjectsPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((proj) => {
           const borderStyle = proj.underConstruction
-            ? "border border-dashed border-gray-400"
+            ? "border border-dashed border-gray-300"
             : "border border-gray-200"
           return (
             <div

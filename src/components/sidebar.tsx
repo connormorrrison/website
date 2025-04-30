@@ -22,7 +22,7 @@ export default function Sidebar() {
     { name: 'About',     path: '/about'   },
     { name: 'Projects',  path: '/projects'},
     { name: 'Blog',      path: '/blog'    },
-    { name: 'Resources', path: '/resources'    },
+    { name: 'Curations', path: '/curations'    },
     { name: 'Contact',   path: '/contact' },
   ]
 
