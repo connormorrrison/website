@@ -2,59 +2,76 @@
 
 import React from "react"
 
+const Badge = ({ text }: { text: string }) => (
+  <span className="px-3 py-1 rounded-full text-base font-medium bg-white dark:bg-zinc-800 text-gray-800 dark:text-gray-100 border border-gray-300 dark:border-zinc-700">
+    {text}
+  </span>
+)
+
 export default function AboutPage() {
   return (
-    <div className="p-8 space-y-6">
+    <div className="flex flex-col items-start justify-start p-8 space-y-8 max-w-3xl">
       <h1 className="text-3xl font-normal">About</h1>
 
-      <p className="text-lg max-w-prose leading-relaxed">
-        I’m an aspiring software engineer driven by a love of computer science,
-        financial markets, and startups. My studies at the University of Alberta
-        and the University of Saskatchewan gave me a foundation in full-stack
-        engineering and data-guided problem solving.
-      </p>
+      {/* Education */}
+      <div className="flex flex-col space-y-4 w-full">
+        <h2 className="text-xl font-semibold">Education</h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
-        {[
-          {
-            heading: "Core Stack",
-            items: [
-              "React / Next.js / TypeScript",
-              "Tailwind CSS / shadcn/ui",
-              "FastAPI / PostgreSQL",
-            ],
-          },
-          {
-            heading: "Now Exploring",
-            items: [
-              "AI agents & LLM tooling",
-              "Rust for systems work",
-              "Serverless architectures",
-            ],
-          },
-        ].map(({ heading, items }) => (
-          <div
-            key={heading}
-            className="
-              p-4
-              rounded-xl
-              border border-gray-200
-              shadow-base
-              hover:shadow
-              transition
-              flex flex-col justify-between
-            "
-          >
-            <div>
-              <h2 className="text-xl font-normal mb-2">{heading}</h2>
-              <ul className="list-disc list-inside space-y-1 text-lg">
-                {items.map((li) => (
-                  <li key={li}>{li}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        ))}
+        <div className="w-full p-4 rounded-2xl border border-gray-200 shadow-sm bg-white dark:bg-zinc-900">
+          <h3 className="text-base font-medium">University of Alberta</h3>
+          <p className="text-base text-gray-700 dark:text-gray-300">Major in Finance</p>
+        </div>
+
+        <div className="w-full p-4 rounded-2xl border border-gray-200 shadow-sm bg-white dark:bg-zinc-900">
+          <h3 className="text-base font-medium">University of Saskatchewan</h3>
+          <p className="text-base text-gray-700 dark:text-gray-300">Major in Computer Science</p>
+        </div>
+      </div>
+
+      {/* Languages */}
+      <div className="w-full">
+        <h2 className="text-xl font-semibold mb-3">Languages</h2>
+        <div className="flex flex-wrap gap-2">
+          {["Python", "Java", "TypeScript", "C", "SQL", "Golang", "RISC-V"].map((lang) => (
+            <Badge key={lang} text={lang} />
+          ))}
+        </div>
+      </div>
+
+      {/* Technologies */}
+      <div className="w-full">
+        <h2 className="text-xl font-semibold mb-3">Technologies</h2>
+        <div className="flex flex-wrap gap-2">
+          {["PostgreSQL", "Linux", "Git", "GitHub"].map((tech) => (
+            <Badge key={tech} text={tech} />
+          ))}
+        </div>
+      </div>
+
+      {/* Libraries & Frameworks */}
+      <div className="w-full">
+        <h2 className="text-xl font-semibold mb-3">Libraries & Frameworks</h2>
+        <div className="flex flex-wrap gap-2">
+          {["React", "Next.js", "Tailwind CSS"].map((lib) => (
+            <Badge key={lib} text={lib} />
+          ))}
+        </div>
+      </div>
+
+      {/* Interests */}
+      <div className="w-full">
+        <h2 className="text-xl font-semibold mb-3">Interests</h2>
+        <div className="flex flex-wrap gap-2">
+          {[
+            "Financial markets",
+            "Software tooling",
+            "Macroeconomics",
+            "Startups",
+            "Design systems",
+          ].map((interest) => (
+            <Badge key={interest} text={interest} />
+          ))}
+        </div>
       </div>
     </div>
   )

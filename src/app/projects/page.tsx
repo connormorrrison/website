@@ -14,7 +14,7 @@ const projects = [
     title: "Personal Website",
     description:
       "Next.js + Tailwind CSS portfolio site with dark/light theme toggle and animated transitions.",
-    techs: ["Next.js", "Tailwind CSS", "ShadCN UI"],
+    techs: ["Next.js", "TypeScript", "Tailwind CSS"],
     url: "/",
     githubUrl: "https://github.com/connormorrrison/personal-website",
   },
@@ -54,12 +54,12 @@ export default function ProjectsPage() {
             >
               <div>
                 <h2 className="text-xl font-normal mb-2">{proj.title}</h2>
-                <p className="text-sm mb-2">{proj.description}</p>
+                <p className="text-base mb-2">{proj.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {proj.techs.map((t) => (
                     <span
                       key={t}
-                      className="px-3 py-1 border rounded text-xs"
+                      className="px-3 py-1 border rounded text-base"
                     >
                       {t}
                     </span>
