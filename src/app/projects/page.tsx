@@ -1,6 +1,12 @@
 "use client"
 import React from "react"
 
+const Badge = ({ text }: { text: string }) => (
+  <span className="px-3 py-1 rounded-full text-base font-normal bg-white dark:bg-zinc-800 text-gray-800 dark:text-gray-100 border border-gray-300 dark:border-zinc-700">
+    {text}
+  </span>
+)
+
 const projects = [
   {
     title: "MockTrade",
@@ -41,8 +47,7 @@ export default function ProjectsPage() {
           return (
             <div
               key={proj.title}
-              className={
-                `
+              className={`
                 p-4
                 rounded-xl
                 ${borderStyle}
@@ -57,12 +62,7 @@ export default function ProjectsPage() {
                 <p className="text-base mb-2">{proj.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {proj.techs.map((t) => (
-                    <span
-                      key={t}
-                      className="px-3 py-1 border rounded text-base"
-                    >
-                      {t}
-                    </span>
+                    <Badge key={t} text={t} />
                   ))}
                 </div>
               </div>
@@ -73,7 +73,7 @@ export default function ProjectsPage() {
                   rel="noopener noreferrer"
                   className="hover:underline"
                 >
-                  View ↗
+                  View ↗
                 </a>
                 <a
                   href={proj.githubUrl}
@@ -81,7 +81,7 @@ export default function ProjectsPage() {
                   rel="noopener noreferrer"
                   className="hover:underline"
                 >
-                  GitHub ↗
+                  GitHub ↗
                 </a>
               </div>
             </div>
