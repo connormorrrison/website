@@ -7,22 +7,27 @@ const Badge = ({ text }: { text: string }) => (
   </span>
 )
 
-// No need for universities array with the simplified layout
-
 export default function AboutPage() {
   return (
     <div className="flex flex-col items-start justify-start p-8 space-y-8 max-w-3xl">
       <h1 className="text-3xl font-normal">About</h1>
-      
+
+      {/* Bio */}
+      <div className="w-full">
+        <h2 className="text-xl font-normal mb-2">Bio</h2>
+        <p className="text-base">
+          Aspiring software engineer building at the intersection of computer science and finance. I'm passionate about decentralized finance, capital markets, and crafting elegant software for the fintech space.        </p>
+      </div>
+
       {/* Education */}
       <div className="flex flex-col space-y-4 w-full">
         <h2 className="text-xl font-normal">Education</h2>
         <div className="w-full p-4 rounded-2xl border border-gray-200 shadow-base hover:shadow transition bg-white dark:bg-zinc-900">
-          <h3 className="text-base font-medium">University of Alberta</h3>
+          <h3 className="text-base font-normal">University of Alberta</h3>
           <p className="text-base text-gray-700 dark:text-gray-300">Major in Finance</p>
         </div>
         <div className="w-full p-4 rounded-2xl border border-gray-200 shadow-base hover:shadow transition bg-white dark:bg-zinc-900">
-          <h3 className="text-base font-medium">University of Saskatchewan</h3>
+          <h3 className="text-base font-normal">University of Saskatchewan</h3>
           <p className="text-base text-gray-700 dark:text-gray-300">Major in Computer Science</p>
         </div>
       </div>
@@ -65,11 +70,11 @@ export default function AboutPage() {
             "Software Engineering",
             "Fintech",
             "Decentralized Finance",
+            "Capital Markets",
             "Startups",
             "SaaS",
             "AI Agents",
             "Product Design",
-            "Capital Markets",
             "Economics"
           ].map((interest) => (
             <Badge key={interest} text={interest} />
