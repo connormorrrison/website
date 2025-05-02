@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import Link from "next/link"
 import ContributionGraph from "@/components/contribution-graph"
 import React from "react"
