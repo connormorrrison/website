@@ -11,7 +11,7 @@ const projects = [
   {
     title: "MockTrade",
     description:
-      "Full‑stack trading simulator with real‑time data, JWT auth, and interactive dashboards.",
+      "Full-stack trading simulator with real-time data, JWT auth, and interactive dashboards.",
     techs: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL"],
     url: "https://www.mocktrade.ca",
     githubUrl: "https://github.com/connormorrrison/MockTrade",
@@ -39,7 +39,7 @@ export default function ProjectsPage() {
     <div className="p-8 space-y-8 max-w-3xl">
       <h1 className="text-3xl font-normal">Projects</h1>
 
-      <div className="grid gap-6 [grid-template-columns:repeat(auto-fill,minmax(280px,1fr))]">
+      <div className="grid grid-cols-1 gap-6">
         {projects.map((proj) => {
           const borderStyle = proj.underConstruction
             ? "border border-dashed border-gray-300"
@@ -48,7 +48,7 @@ export default function ProjectsPage() {
           return (
             <div
               key={proj.title}
-              className={`max-w-[280px] w-full p-4 rounded-xl ${borderStyle} shadow-base hover:shadow transition flex flex-col justify-between`}
+              className={`w-full max-w-3xl p-4 rounded-xl ${borderStyle} shadow-base hover:shadow transition flex flex-col justify-between`}
             >
               <div>
                 <h2 className="text-xl font-normal mb-2">{proj.title}</h2>
