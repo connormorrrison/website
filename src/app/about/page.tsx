@@ -23,12 +23,12 @@ export default function AboutPage() {
       <div className="flex flex-col space-y-4 w-full">
         <h2 className="text-xl font-normal">Education</h2>
         <div className="w-full p-4 rounded-2xl border border-gray-200 shadow-base hover:shadow transition bg-white dark:bg-zinc-900">
-          <h3 className="text-base font-normal">University of Alberta</h3>
-          <p className="text-base text-gray-700 dark:text-gray-300">Major in Finance</p>
+          <h3 className="text-base font-normal">University of British Columbia (Incoming)</h3>
+          <p className="text-base text-gray-700 dark:text-gray-300">Major in Computer Science</p>
         </div>
         <div className="w-full p-4 rounded-2xl border border-gray-200 shadow-base hover:shadow transition bg-white dark:bg-zinc-900">
-          <h3 className="text-base font-normal">University of Saskatchewan</h3>
-          <p className="text-base text-gray-700 dark:text-gray-300">Major in Computer Science</p>
+          <h3 className="text-base font-normal">University of Alberta</h3>
+          <p className="text-base text-gray-700 dark:text-gray-300">Major in Finance</p>
         </div>
       </div>
 
