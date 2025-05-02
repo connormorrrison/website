@@ -1,5 +1,4 @@
-// src/app/contact/page.tsx
-'use client'
+"use client"
 
 import React, { useState } from 'react'
 
@@ -36,7 +35,7 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="flex flex-col items-start justify-start p-8 space-y-6">
+    <div className="flex flex-col items-start justify-start p-8 space-y-8 max-w-3xl">
       <h1 className="text-3xl font-normal">Contact</h1>
 
       <p className="text-lg">

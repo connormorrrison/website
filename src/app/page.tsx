@@ -17,9 +17,12 @@ export default function Home() {
     "Next.js",
     "Tailwind CSS",
     "Python",
-    "FastAPI",
     "PostgreSQL",
     "Git",
+    "FastAPI",
+    "Vercel",
+    "Linux / Bash",
+    "Pandas"
   ]
 
   return (
@@ -27,6 +30,7 @@ export default function Home() {
       className="
         flex flex-col
         w-full h-full
+        max-w-3xl
         items-start
         justify-start
         space-y-8
@@ -41,10 +45,10 @@ export default function Home() {
       </h1>
 
       {/* 2. Intro paragraph */}
-      <p className="max-w-prose text-lg text-left">
+      <p className="max-w-3xl text-lg text-left">
         I’m an aspiring software engineer building at the intersection of 
         computer science and finance. I studied at both the University of 
-        Alberta and University of Saskatchewan. Focused on full-stack development, 
+        British Columbia (Incoming) and University of Alberta. Focused on full-stack development, 
         data analysis, and fintech applications.
       </p>
 
@@ -64,8 +68,8 @@ export default function Home() {
         </Link>
       </div>
 
-      {/* 4. Tech stack */}
-      <div className="w-full">
+      {/* 4. Tech stack: constrain to prose width */}
+      <div className="max-w-3xl">
         <h2 className="text-2xl font-medium text-left mb-4">Tech Stack</h2>
         <div className="flex flex-wrap justify-start gap-3">
           {techs.map((tech) => (

@@ -11,7 +11,7 @@ const projects = [
   {
     title: "MockTrade",
     description:
-      "Full-stack trading simulator with real-time data, JWT auth, and interactive dashboards.",
+      "Full‑stack trading simulator with real‑time data, JWT auth, and interactive dashboards.",
     techs: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL"],
     url: "https://www.mocktrade.ca",
     githubUrl: "https://github.com/connormorrrison/MockTrade",
@@ -26,8 +26,7 @@ const projects = [
   },
   {
     title: "OpenCoding",
-    description:
-      "Under construction.",
+    description: "Under construction.",
     techs: ["Next.js", "TypeScript"],
     url: "",
     githubUrl: "",
@@ -37,35 +36,31 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <div className="p-8 space-y-6">
+    <div className="p-8 space-y-8 max-w-3xl">
       <h1 className="text-3xl font-normal">Projects</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <div className="grid gap-6 [grid-template-columns:repeat(auto-fill,minmax(280px,1fr))]">
         {projects.map((proj) => {
           const borderStyle = proj.underConstruction
             ? "border border-dashed border-gray-300"
             : "border border-gray-200"
+
           return (
             <div
               key={proj.title}
-              className={`
-                p-4
-                rounded-xl
-                ${borderStyle}
-                shadow-base
-                hover:shadow
-                transition
-                flex flex-col justify-between
-              `}
+              className={`max-w-[280px] w-full p-4 rounded-xl ${borderStyle} shadow-base hover:shadow transition flex flex-col justify-between`}
             >
               <div>
                 <h2 className="text-xl font-normal mb-2">{proj.title}</h2>
                 <p className="text-base mb-2">{proj.description}</p>
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {proj.techs.map((t) => (
                     <Badge key={t} text={t} />
                   ))}
                 </div>
               </div>
+
               <div className="mt-2 flex space-x-4 text-blue-600">
                 <a
                   href={proj.url}
