@@ -1,4 +1,3 @@
-// src/app/layout.tsx
 import "./globals.css"
 import Sidebar from "@/components/sidebar"
 import { ThemeProvider } from "@/components/theme-provider"

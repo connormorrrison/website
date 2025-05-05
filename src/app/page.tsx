@@ -48,7 +48,7 @@ export default function Home() {
       <p className="max-w-3xl text-lg text-left">
         I’m an aspiring software engineer building at the intersection of 
         computer science and finance. I studied at both the University of 
-        British Columbia (Incoming) and University of Alberta. Focused on full-stack development, 
+        British Columbia (incoming) and University of Alberta. Focused on full-stack development, 
         data analysis, and fintech applications.
       </p>
 

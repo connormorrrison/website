@@ -16,7 +16,7 @@ export default function AboutPage() {
       <div className="w-full">
         <h2 className="text-xl font-normal mb-2">Bio</h2>
         <p className="text-base">
-          Aspiring software engineer building at the intersection of computer science and finance. I&#39;m passionate about decentralized finance, capital markets, and crafting elegant software for the fintech space.        </p>
+          Aspiring software engineer building at the intersection of computer science and finance. I&#39;m passionate about capital markets, decentralized finance, and crafting elegant software for the fintech space.        </p>
       </div>
 
       {/* Education */}
@@ -36,7 +36,7 @@ export default function AboutPage() {
       <div className="w-full">
         <h2 className="text-xl font-normal mb-3">Languages</h2>
         <div className="flex flex-wrap gap-2">
-          {["Python", "Java", "TypeScript", "C/C++", "SQL", "Golang", "RISC-V"].map((lang) => (
+          {["Python", "Java", "TypeScript", "C", "Rust", "Golang", "RISC-V"].map((lang) => (
             <Badge key={lang} text={lang} />
           ))}
         </div>
@@ -46,7 +46,7 @@ export default function AboutPage() {
       <div className="w-full">
         <h2 className="text-xl font-normal mb-3">Technologies</h2>
         <div className="flex flex-wrap gap-2">
-          {["PostgreSQL", "Unix/Linux", "Bash", "Git"].map((tech) => (
+          {["PostgreSQL", "Linux", "Bash", "Git"].map((tech) => (
             <Badge key={tech} text={tech} />
           ))}
         </div>
@@ -69,13 +69,11 @@ export default function AboutPage() {
           {[
             "Software Engineering",
             "Fintech",
-            "Decentralized Finance",
             "Capital Markets",
+            "Decentralized Finance",
             "Startups",
             "SaaS",
-            "AI Agents",
-            "Product Design",
-            "Economics"
+            "UI/UX"
           ].map((interest) => (
             <Badge key={interest} text={interest} />
           ))}
