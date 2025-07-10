@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Card } from '@/components/ui/card'
 import { IconButton } from '@/components/ui/icon-button'
 import { ThemeToggle } from '@/components/theme-toggle'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { PanelRightClose, PanelRightOpen } from 'lucide-react'
 
 export default function Sidebar() {
   const [isPinned, setIsPinned] = useState(true)
@@ -98,9 +98,9 @@ export default function Sidebar() {
           className="pin-button absolute bottom-4 right-4"
         >
           {showCollapseIcon ? (
-            <ChevronLeft className="w-5 h-5 transition-transform duration-200" />
+            <PanelRightOpen className="w-5 h-5 transition-transform duration-200" />
           ) : (
-            <ChevronRight className="w-5 h-5 transition-transform duration-200" />
+            <PanelRightClose className="w-5 h-5 transition-transform duration-200" />
           )}
         </IconButton>
 
@@ -110,7 +110,7 @@ export default function Sidebar() {
               <li key={item.name}>
                 <Link
                   href={item.path}
-                  className="block px-4 py-2 rounded-lg text-lg font-normal hover:bg-gray-100"
+                  className="block px-4 py-2 rounded-lg text-lg font-normal text-foreground hover:bg-gray-100"
                 >
                   {item.name}
                 </Link>

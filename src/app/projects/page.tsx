@@ -33,7 +33,7 @@ const projects = [
 export default function ProjectsPage() {
   return (
     <div className="px-8 pb-8 space-y-8 max-w-3xl" style={{paddingTop: '64px'}}>
-      <h1 className="text-3xl font-normal">Projects</h1>
+      <h1 className="text-3xl font-normal text-foreground">Projects</h1>
 
       <div className="grid grid-cols-1 gap-6">
         {projects.map((proj) => {
@@ -44,8 +44,8 @@ export default function ProjectsPage() {
               className="max-w-3xl flex flex-col justify-between"
             >
               <div>
-                <h2 className="text-xl font-normal mb-2">{proj.title}</h2>
-                <p className="text-lg mb-2">{proj.description}</p>
+                <h2 className="text-xl font-normal text-foreground mb-2">{proj.title}</h2>
+                <p className="text-lg text-foreground mb-2">{proj.description}</p>
 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {proj.techs.map((t) => (

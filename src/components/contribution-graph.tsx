@@ -187,7 +187,6 @@ export default function ContributionGraph() {
           width: `${dimensions.width}px`,
           height: `${dimensions.height}px`,
           maxWidth: '100%',
-          transition: 'width 0.2s ease-out', // Optional: smooth transition
         }}
       />
     </div>

@@ -35,12 +35,12 @@ export default function Home() {
       style={{paddingTop: '64px'}}
     >
       {/* 1. Heading */}
-      <h1 className="text-3xl font-normal text-left">
+      <h1 className="text-3xl font-normal text-foreground text-left">
         Hi, I'm Connor
       </h1>
 
       {/* 2. Intro paragraph */}
-      <p className="max-w-3xl text-lg text-left">
+      <p className="max-w-3xl text-lg text-foreground text-left">
         I'm a computer science student at the University of British Columbia and a 
         finance graduate from the University of Alberta, building at the intersection 
         of computer science and finance. I'm focused on software engineering, ML/AI, and fintech applications.
@@ -75,7 +75,7 @@ export default function Home() {
 
       {/* 4. Tech stack: constrain to prose width */}
       <div className="max-w-3xl">
-        <h2 className="text-xl font-normal text-left mb-3">
+        <h2 className="text-xl font-normal text-foreground text-left mb-3">
           Tech Stack
         </h2>
         <div className="flex flex-wrap justify-start gap-2">

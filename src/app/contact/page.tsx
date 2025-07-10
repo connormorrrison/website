@@ -33,9 +33,9 @@ export default function ContactPage() {
 
   return (
     <div className="flex flex-col items-start justify-start px-8 pb-8 space-y-8 max-w-3xl" style={{paddingTop: '64px'}}>
-      <h1 className="text-3xl font-normal">Contact</h1>
+      <h1 className="text-3xl font-normal text-foreground">Contact</h1>
       
-      <p className="text-lg">
+      <p className="text-lg text-foreground">
         If you have a question, want to collaborate, or simply say hi, feel free to reach out.
       </p>
       
