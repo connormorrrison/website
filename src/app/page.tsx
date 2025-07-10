@@ -4,7 +4,7 @@ import ContributionGraph from "@/components/contribution-graph"
 import React from "react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { ArrowUpRight } from "lucide-react"
+import { ArrowUpRight, MapPin } from "lucide-react"
 
 export default function Home() {
   const techs = [
@@ -45,6 +45,12 @@ export default function Home() {
         finance graduate from the University of Alberta, building at the intersection 
         of computer science and finance. I'm focused on software engineering, ML/AI, and fintech applications.
       </p>
+      
+      {/* Location */}
+      <div className="flex items-center gap-2 text-lg text-foreground">
+        <MapPin className="w-4 h-4" />
+        <span>Vancouver, BC</span>
+      </div>
 
       {/* 3. Button row */}
       {/* Changed to use flex-wrap and gap-2 for consistent spacing with the tech stack badges */}

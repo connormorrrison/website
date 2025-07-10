@@ -2,6 +2,7 @@
 import React from "react"
 import { Badge } from "@/components/ui/badge"
 import { Tile } from "@/components/ui/tile"
+import { MapPin } from "lucide-react"
 
 export default function AboutPage() {
   return (
@@ -10,12 +11,21 @@ export default function AboutPage() {
       
       {/* Bio */}
       <div className="w-full">
-        <h2 className="text-xl font-normal mb-2">Bio</h2>
+        <h2 className="text-xl font-normal text-foreground mb-2">Bio</h2>
         <p className="text-lg text-foreground">
           Aspiring software engineer building at the intersection of computer
           science and finance. I'm passionate about capital and prediction markets, decentralized
           technologies, and crafting elegant software for the fintech space.
         </p>
+      </div>
+
+      {/* Location */}
+      <div className="w-full">
+        <h2 className="text-xl font-normal text-foreground mb-3">Location</h2>
+        <div className="flex items-center gap-2 text-lg text-foreground">
+          <MapPin className="w-4 h-4" />
+          <span>Vancouver, BC</span>
+        </div>
       </div>
 
       {/* Education */}

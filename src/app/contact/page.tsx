@@ -36,7 +36,7 @@ export default function ContactPage() {
       <h1 className="text-3xl font-normal text-foreground">Contact</h1>
       
       <p className="text-lg text-foreground">
-        If you have a question, want to collaborate, or simply say hi, feel free to reach out.
+        If you have a question, want to collaborate, or simply to say hi, feel free to reach out.
       </p>
       
       <ul className="space-y-2 text-lg">
@@ -79,7 +79,7 @@ export default function ContactPage() {
           placeholder="Name"
           value={name}
           onChange={e => setName(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring"
+          className="w-full px-4 py-2 text-lg text-muted-foreground bg-background dark:bg-input/30 border border-gray-300 dark:border-zinc-700 rounded-lg focus:outline-none focus:ring"
         />
         <input
           type="email"
@@ -87,19 +87,19 @@ export default function ContactPage() {
           value={email}
           onChange={e => setEmail(e.target.value)}
           required
-          className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring"
+          className="w-full px-4 py-2 text-lg text-muted-foreground bg-background dark:bg-input/30 border border-gray-300 dark:border-zinc-700 rounded-lg focus:outline-none focus:ring"
         />
         <textarea
           placeholder="Message*"
           value={message}
           onChange={e => setMessage(e.target.value)}
           required
-          className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring h-32 resize-none"
+          className="w-full px-4 py-2 text-lg text-muted-foreground bg-background dark:bg-input/30 border border-gray-300 dark:border-zinc-700 rounded-lg focus:outline-none focus:ring h-32 resize-none"
         />
         <button
           type="submit"
           disabled={status === 'sending'}
-          className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 shadow-none"
+          className="px-6 py-2 text-lg font-normal text-white bg-blue-600 border border-gray-300 dark:border-zinc-700 rounded-lg hover:bg-blue-700 disabled:opacity-50 shadow-none"
         >
           {status === 'sending' ? 'Sending...' : 'Send Message'}
         </button>

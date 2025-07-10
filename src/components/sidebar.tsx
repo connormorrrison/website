@@ -10,6 +10,7 @@ import { PanelRightClose, PanelRightOpen } from 'lucide-react'
 export default function Sidebar() {
   const [isPinned, setIsPinned] = useState(true)
   const [isVisible, setIsVisible] = useState(true)
+  const [isMounted, setIsMounted] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
   const [isCollapsing, setIsCollapsing] = useState(false)
   const [justPinned, setJustPinned] = useState(false)
@@ -58,6 +59,16 @@ export default function Sidebar() {
     }
   }
 
+  // Initialize responsive state
+  useEffect(() => {
+    setIsMounted(true)
+    const isMobile = window.innerWidth < 768 // Tailwind's md breakpoint
+    if (isMobile) {
+      setIsPinned(false)
+      setIsVisible(false)
+    }
+  }, [])
+
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (!isPinned) {
@@ -74,6 +85,11 @@ export default function Sidebar() {
   }, [isPinned])
 
   const showCollapseIcon = (isPinned && !justPinned) || isCollapsing
+
+  // Don't render until mounted to avoid hydration issues
+  if (!isMounted) {
+    return null
+  }
 
   return (
     <div ref={sidebarRef} className="relative h-full">
