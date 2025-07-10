@@ -60,7 +60,6 @@ export default function Home() {
         <Link href="/projects" passHref>
           <Button
             variant="outline"
-            size="default"
             className="rounded-full h-16 px-10 text-lg font-normal shadow-none border-gray-300 dark:border-zinc-700"
             aria-label="View Projects"
           >
@@ -70,7 +69,6 @@ export default function Home() {
         <Link href="/contact" passHref>
           <Button
             variant="outline"
-            size="default"
             className="rounded-full h-16 px-10 text-lg font-normal shadow-none border-gray-300 dark:border-zinc-700"
             aria-label="Contact Me"
           >

@@ -2,6 +2,7 @@
 
 import React from "react"
 import Link from "next/link"
+import { ArrowUpRight } from "lucide-react"
 
 interface Item {
   title: string
@@ -104,7 +105,7 @@ export default function CurationsPage() {
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline focus:outline-none focus:ring"
           >
-            {item.title} ↗
+            {item.title} <ArrowUpRight className="inline w-5 h-5" />
           </Link>
         </li>
       ))}
