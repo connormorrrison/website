@@ -48,7 +48,7 @@ export default function Home() {
       
       {/* Location */}
       <div className="flex items-center gap-2 text-lg text-foreground">
-        <MapPin className="w-4 h-4" />
+        <MapPin className="w-5 h-5" />
         <span>Vancouver, BC</span>
       </div>
 
@@ -64,7 +64,7 @@ export default function Home() {
             className="rounded-full h-16 px-10 text-lg font-normal shadow-none border-gray-300 dark:border-zinc-700"
             aria-label="View Projects"
           >
-            View Projects <ArrowUpRight className="ml-2 w-4 h-4" />
+            View Projects <ArrowUpRight className="ml-2 w-5 h-5" />
           </Button>
         </Link>
         <Link href="/contact" passHref>
@@ -74,7 +74,7 @@ export default function Home() {
             className="rounded-full h-16 px-10 text-lg font-normal shadow-none border-gray-300 dark:border-zinc-700"
             aria-label="Contact Me"
           >
-            Contact Me <ArrowUpRight className="ml-2 w-4 h-4" />
+            Contact Me <ArrowUpRight className="ml-2 w-5 h-5" />
           </Button>
         </Link>
       </div>

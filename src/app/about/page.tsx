@@ -23,7 +23,7 @@ export default function AboutPage() {
       <div className="w-full">
         <h2 className="text-xl font-normal text-foreground mb-3">Location</h2>
         <div className="flex items-center gap-2 text-lg text-foreground">
-          <MapPin className="w-4 h-4" />
+          <MapPin className="w-5 h-5" />
           <span>Vancouver, BC</span>
         </div>
       </div>
