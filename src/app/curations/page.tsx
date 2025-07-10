@@ -22,7 +22,7 @@ export default function CurationsPage() {
         {
           title: "Zero to One: Notes on Startups, or How to Build the Future",
           url: "https://www.amazon.com/Zero-One-Notes-Startups-Future/dp/0804139296",
-          description: "Peter Thiel’s take on building monopolies through innovation."
+          description: "Peter Thiel's take on building monopolies through innovation."
         },
         {
           title: "Boom: Bubbles and the End of Stagnation",
@@ -42,7 +42,7 @@ export default function CurationsPage() {
         {
           title: "The Almanack of Naval Ravikant: A Guide to Wealth and Happiness",
           url: "https://www.amazon.com/Almanack-Naval-Ravikant-Wealth-Happiness-ebook/dp/B08FF8MTM6",
-          description: "Naval’s distilled wisdom on decision‑making, habits, and long‑term thinking."
+          description: "Naval's distilled wisdom on decision‑making, habits, and long‑term thinking."
         }
       ]
     },
@@ -97,7 +97,7 @@ export default function CurationsPage() {
   const renderList = (items: Item[]) => (
     <ul className="space-y-2 text-lg">
       {items.map((item, i) => (
-        <li key={item.url + i} className="relative group">
+        <li key={item.url + i}>
           <Link
             href={item.url}
             target="_blank"
@@ -106,18 +106,6 @@ export default function CurationsPage() {
           >
             {item.title} ↗
           </Link>
-          <span
-            className="
-              pointer-events-none absolute bottom-full left-1/2 transform -translate-x-1/2
-              mb-2 max-w-xs hidden group-hover:block group-focus:block
-              bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-900
-              text-lg px-3 py-2 rounded shadow-lg transition-opacity duration-150
-              opacity-0 group-hover:opacity-100 group-focus:opacity-100 z-10
-            "
-            role="tooltip"
-          >
-            {item.description}
-          </span>
         </li>
       ))}
     </ul>

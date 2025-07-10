@@ -82,8 +82,8 @@ export default function Sidebar() {
         onMouseLeave={handleMouseLeave}
         className={`
           relative flex flex-col
-          w-48 p-4 rounded-xl shadow-md
-          hover:shadow-lg transition-all duration-300
+          w-48 p-4 rounded-xl
+          transition-all duration-300
           ${isVisible ? 'opacity-100' : 'opacity-0'}
         `}
         style={{

@@ -80,7 +80,7 @@ export default function Home() {
 
       {/* 4. Tech stack: constrain to prose width */}
       <div className="max-w-3xl">
-        <h2 className="text-2xl font-normal text-left mb-3">
+        <h2 className="text-xl font-normal text-left mb-3">
           Tech Stack
         </h2>
         <div className="flex flex-wrap justify-start gap-2">
