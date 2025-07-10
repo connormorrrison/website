@@ -1,12 +1,11 @@
 "use client"
-
 import React from "react"
 import { Github, Linkedin, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function SocialLinks() {
   return (
-    <div className="absolute top-6 right-6 flex space-x-4 z-10">
+    <div className="absolute flex space-x-4 z-10" style={{top: '32px', right: '32px'}}>
       {/* Email button */}
       <Button
         asChild
@@ -19,7 +18,7 @@ export default function SocialLinks() {
           <Mail className="w-5 h-5" />
         </a>
       </Button>
-
+      
       {/* LinkedIn button */}
       <Button
         asChild
@@ -36,7 +35,7 @@ export default function SocialLinks() {
           <Linkedin className="w-5 h-5" />
         </a>
       </Button>
-
+      
       {/* GitHub button */}
       <Button
         asChild

@@ -2,7 +2,7 @@
 import React from "react"
 
 const Badge = ({ text }: { text: string }) => (
-  <span className="px-3 py-1 rounded-full text-base font-normal bg-white dark:bg-zinc-800 text-gray-800 dark:text-gray-100 border border-gray-300 dark:border-zinc-700">
+  <span className="px-3 py-1 rounded-full text-lg font-normal bg-white dark:bg-zinc-800 text-gray-800 dark:text-gray-100 border border-gray-300 dark:border-zinc-700">
     {text}
   </span>
 )
@@ -36,7 +36,7 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <div className="p-8 space-y-8 max-w-3xl">
+    <div className="px-8 pb-8 space-y-8 max-w-3xl" style={{paddingTop: '64px'}}>
       <h1 className="text-3xl font-normal">Projects</h1>
 
       <div className="grid grid-cols-1 gap-6">
@@ -48,11 +48,11 @@ export default function ProjectsPage() {
           return (
             <div
               key={proj.title}
-              className={`w-full max-w-3xl p-4 rounded-xl ${borderStyle} shadow-base hover:shadow transition flex flex-col justify-between`}
+              className={`w-full max-w-3xl p-4 rounded-xl ${borderStyle} shadow-base flex flex-col justify-between`}
             >
               <div>
                 <h2 className="text-xl font-normal mb-2">{proj.title}</h2>
-                <p className="text-base mb-2">{proj.description}</p>
+                <p className="text-lg mb-2">{proj.description}</p>
 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {proj.techs.map((t) => (
@@ -61,7 +61,7 @@ export default function ProjectsPage() {
                 </div>
               </div>
 
-              <div className="mt-2 flex space-x-4 text-blue-600">
+              <div className="mt-2 flex space-x-4 text-lg text-blue-600">
                 <a
                   href={proj.url}
                   target="_blank"

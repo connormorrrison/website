@@ -1,11 +1,12 @@
 "use client"
-
 import Link from "next/link"
 import ContributionGraph from "@/components/contribution-graph"
 import React from "react"
+import { Button } from "@/components/ui/button"
+import { ArrowUpRight } from "lucide-react"
 
 const Badge = ({ text }: { text: string }) => (
-  <span className="px-3 py-1 rounded-full text-base font-normal bg-white dark:bg-zinc-800 text-gray-800 dark:text-gray-100 border border-gray-300 dark:border-zinc-700">
+  <span className="px-3 py-1 rounded-full text-lg font-normal bg-white dark:bg-zinc-800 text-gray-800 dark:text-gray-100 border border-gray-300 dark:border-zinc-700">
     {text}
   </span>
 )
@@ -34,44 +35,55 @@ export default function Home() {
         items-start
         justify-start
         space-y-8
-        pt-16
-        pb-20
-        px-8
+        px-8 pb-8
       "
+      style={{paddingTop: '64px'}}
     >
       {/* 1. Heading */}
-      <h1 className="text-5xl font-normal text-left">
-        Hi, I’m Connor
+      <h1 className="text-3xl font-normal text-left">
+        Hi, I'm Connor
       </h1>
 
       {/* 2. Intro paragraph */}
       <p className="max-w-3xl text-lg text-left">
-        I’m an aspiring software engineer building at the intersection of 
-        computer science and finance. I studied at both the University of 
-        British Columbia (incoming) and University of Alberta. Focused on full-stack development, 
-        data analysis, and fintech applications.
+        I'm a computer science student at the University of British Columbia and a 
+        finance graduate from the University of Alberta, building at the intersection 
+        of computer science and finance. I'm focused on software engineering, ML/AI, and fintech applications.
       </p>
 
       {/* 3. Button row */}
-      <div className="flex space-x-6">
-        <Link
-          href="/projects"
-          className="px-6 py-2 border rounded-full hover:shadow transition"
-        >
-          View Projects ↗
+      {/* Changed to use flex-wrap and gap-2 for consistent spacing with the tech stack badges */}
+      <div className="flex flex-wrap gap-2">
+        {/* Link components are assumed to be from Next.js, for a standalone React app
+         these would typically be anchor tags or a custom routing solution. */}
+        <Link href="/projects" passHref>
+          <Button
+            variant="outline"
+            size="default"
+            className="rounded-full h-16 px-10 text-lg font-normal"
+            aria-label="View Projects"
+          >
+            View Projects <ArrowUpRight className="ml-2 w-4 h-4" />
+          </Button>
         </Link>
-        <Link
-          href="/contact"
-          className="px-6 py-2 border rounded-full hover:shadow transition"
-        >
-          Contact Me ↗
+        <Link href="/contact" passHref>
+          <Button
+            variant="outline"
+            size="default"
+            className="rounded-full h-16 px-10 text-lg font-normal"
+            aria-label="Contact Me"
+          >
+            Contact Me <ArrowUpRight className="ml-2 w-4 h-4" />
+          </Button>
         </Link>
       </div>
 
       {/* 4. Tech stack: constrain to prose width */}
       <div className="max-w-3xl">
-        <h2 className="text-2xl font-medium text-left mb-4">Tech Stack</h2>
-        <div className="flex flex-wrap justify-start gap-3">
+        <h2 className="text-2xl font-normal text-left mb-3">
+          Tech Stack
+        </h2>
+        <div className="flex flex-wrap justify-start gap-2">
           {techs.map((tech) => (
             <Badge key={tech} text={tech} />
           ))}
@@ -80,6 +92,7 @@ export default function Home() {
 
       {/* 5. Contribution graph */}
       <div className="w-full mt-10">
+        {/* ContributionGraph component is assumed to be defined elsewhere */}
         <ContributionGraph />
       </div>
     </div>

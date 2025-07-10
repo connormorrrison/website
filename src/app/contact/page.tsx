@@ -1,17 +1,15 @@
 "use client"
-
 import React, { useState } from 'react'
 
 export default function ContactPage() {
-  const [name, setName]       = useState('')
-  const [email, setEmail]     = useState('')
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
-  const [status, setStatus]   = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus('sending')
-
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
@@ -22,7 +20,6 @@ export default function ContactPage() {
           message: message.trim(),
         }),
       })
-
       if (!res.ok) throw new Error('Mail failed')
       setStatus('sent')
       setName('')
@@ -35,13 +32,13 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="flex flex-col items-start justify-start p-8 space-y-8 max-w-3xl">
+    <div className="flex flex-col items-start justify-start px-8 pb-8 space-y-8 max-w-3xl" style={{paddingTop: '64px'}}>
       <h1 className="text-3xl font-normal">Contact</h1>
-
+      
       <p className="text-lg">
         If you have a question, want to collaborate, or simply say hi, feel free to reach out.
       </p>
-
+      
       <ul className="space-y-2 text-lg">
         <li>
           <a
@@ -72,10 +69,10 @@ export default function ContactPage() {
           </a>
         </li>
       </ul>
-
+      
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-md flex flex-col space-y-4"
+        className="w-full max-w-md flex flex-col space-y-4 text-lg"
       >
         <input
           type="text"
@@ -84,7 +81,6 @@ export default function ContactPage() {
           onChange={e => setName(e.target.value)}
           className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring"
         />
-
         <input
           type="email"
           placeholder="Email*"
@@ -93,7 +89,6 @@ export default function ContactPage() {
           required
           className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring"
         />
-
         <textarea
           placeholder="Message*"
           value={message}
@@ -101,7 +96,6 @@ export default function ContactPage() {
           required
           className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring h-32 resize-none"
         />
-
         <button
           type="submit"
           disabled={status === 'sending'}
@@ -109,8 +103,7 @@ export default function ContactPage() {
         >
           {status === 'sending' ? 'Sending...' : 'Send Message'}
         </button>
-
-        {status === 'sent'  && <p className="text-green-600">Message sent!</p>}
+        {status === 'sent' && <p className="text-green-600">Message sent!</p>}
         {status === 'error' && <p className="text-red-600">Failed to send.</p>}
       </form>
     </div>

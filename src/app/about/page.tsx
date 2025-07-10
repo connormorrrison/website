@@ -2,33 +2,36 @@
 import React from "react"
 
 const Badge = ({ text }: { text: string }) => (
-  <span className="px-3 py-1 rounded-full text-base font-normal bg-white dark:bg-zinc-800 text-gray-800 dark:text-gray-100 border border-gray-300 dark:border-zinc-700">
+  <span className="px-3 py-1 rounded-full text-lg font-normal bg-white dark:bg-zinc-800 text-gray-800 dark:text-gray-100 border border-gray-300 dark:border-zinc-700">
     {text}
   </span>
 )
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col items-start justify-start p-8 space-y-8 max-w-3xl">
+    <div className="flex flex-col items-start justify-start px-8 pb-8 space-y-8 max-w-3xl" style={{paddingTop: '64px'}}>
       <h1 className="text-3xl font-normal">About</h1>
-
+      
       {/* Bio */}
       <div className="w-full">
         <h2 className="text-xl font-normal mb-2">Bio</h2>
-        <p className="text-base">
-          Aspiring software engineer building at the intersection of computer science and finance. I&#39;m passionate about capital markets, decentralized finance, and crafting elegant software for the fintech space.        </p>
+        <p className="text-lg">
+          Aspiring software engineer building at the intersection of computer
+          science and finance. I'm passionate about capital and prediction markets, decentralized
+          technologies, and crafting elegant software for the fintech space.
+        </p>
       </div>
 
       {/* Education */}
       <div className="flex flex-col space-y-4 w-full">
         <h2 className="text-xl font-normal">Education</h2>
-        <div className="w-full p-4 rounded-2xl border border-gray-200 shadow-base hover:shadow transition bg-white dark:bg-zinc-900">
-          <h3 className="text-base font-normal">University of British Columbia (Incoming)</h3>
-          <p className="text-base text-gray-700 dark:text-gray-300">Major in Computer Science</p>
+        <div className="w-full p-4 rounded-2xl border border-gray-200 shadow-base bg-white dark:bg-zinc-900">
+          <h3 className="text-lg font-normal">University of British Columbia</h3>
+          <p className="text-lg text-gray-700 dark:text-gray-300">Major in Computer Science</p>
         </div>
-        <div className="w-full p-4 rounded-2xl border border-gray-200 shadow-base hover:shadow transition bg-white dark:bg-zinc-900">
-          <h3 className="text-base font-normal">University of Alberta</h3>
-          <p className="text-base text-gray-700 dark:text-gray-300">Major in Finance</p>
+        <div className="w-full p-4 rounded-2xl border border-gray-200 shadow-base bg-white dark:bg-zinc-900">
+          <h3 className="text-lg font-normal">University of Alberta</h3>
+          <p className="text-lg text-gray-700 dark:text-gray-300">Major in Finance</p>
         </div>
       </div>
 
@@ -46,7 +49,7 @@ export default function AboutPage() {
       <div className="w-full">
         <h2 className="text-xl font-normal mb-3">Technologies</h2>
         <div className="flex flex-wrap gap-2">
-          {["PostgreSQL", "Linux", "Bash", "Git"].map((tech) => (
+          {["PostgreSQL", "Linux", "Bash", "Git", "Claude Code"].map((tech) => (
             <Badge key={tech} text={tech} />
           ))}
         </div>
@@ -68,9 +71,11 @@ export default function AboutPage() {
         <div className="flex flex-wrap gap-2">
           {[
             "Software Engineering",
+            "ML/AI",
             "Fintech",
             "Capital Markets",
-            "Decentralized Finance",
+            "Prediction Markets",
+            "Web3",
             "Startups",
             "SaaS",
             "UI/UX"

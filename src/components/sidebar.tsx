@@ -1,47 +1,63 @@
 // src/components/sidebar.tsx
-
 "use client"
-
 import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { Card } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
 import { ThemeToggle } from '@/components/theme-toggle'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 export default function Sidebar() {
   const [isPinned, setIsPinned] = useState(true)
   const [isVisible, setIsVisible] = useState(true)
   const [isHovered, setIsHovered] = useState(false)
-  // Ref to sidebar container (not strictly needed here but kept for consistency)
+  const [isCollapsing, setIsCollapsing] = useState(false)
+  const [justPinned, setJustPinned] = useState(false)
   const sidebarRef = useRef<HTMLDivElement>(null)
-
-  // Distance threshold in px for hover-trigger
   const HOVER_THRESHOLD = 200
 
   const menuItems = [
-    { name: 'Home',      path: '/'        },
-    { name: 'About',     path: '/about'   },
-    { name: 'Projects',  path: '/projects'},
-    { name: 'Blog',      path: '/blog'    },
-    { name: 'Curations', path: '/curations'    },
-    { name: 'Contact',   path: '/contact' },
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Projects', path: '/projects' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Curations', path: '/curations' },
+    { name: 'Contact', path: '/contact' },
   ]
 
-  // Toggle pinned state on click (ignoring clicks on links or the theme toggle)
-  const handleSidebarClick = (e: React.MouseEvent) => {
-    if (
-      (e.target as HTMLElement).tagName !== 'A' &&
-      !e.currentTarget.querySelector('.theme-toggle')?.contains(e.target as Node)
-    ) {
-      setIsPinned(!isPinned)
-      if (isPinned && !isHovered) {
+  // This function now only gets called by the button
+  const togglePin = () => {
+    const currentlyPinned = isPinned
+    setIsPinned(!currentlyPinned)
+    if (currentlyPinned) {
+      setIsCollapsing(true)
+      if (!isHovered) {
         setIsVisible(false)
-      } else {
-        setIsVisible(true)
       }
+    } else {
+      setIsVisible(true)
+      setJustPinned(true)
     }
   }
 
-  // Show/hide on hover when unpinned, using the updated threshold
+  // Event handler for the pin button
+  const handlePinClick = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    togglePin()
+  }
+
+  const handleTransitionEnd = () => {
+    if (isCollapsing) {
+      setIsCollapsing(false)
+    }
+  }
+
+  const handleMouseLeave = () => {
+    if (justPinned) {
+      setJustPinned(false)
+    }
+  }
+
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (!isPinned) {
@@ -57,35 +73,46 @@ export default function Sidebar() {
     }
   }, [isPinned])
 
+  const showCollapseIcon = (isPinned && !justPinned) || isCollapsing
+
   return (
     <div ref={sidebarRef} className="relative h-full">
       <Card
-        onClick={handleSidebarClick}
+        onTransitionEnd={handleTransitionEnd}
+        onMouseLeave={handleMouseLeave}
         className={`
           relative flex flex-col
-          w-48 h-[calc(100vh-4rem)] mt-8 p-4 rounded-xl shadow-md
-          hover:shadow-lg transition-all duration-300 cursor-pointer
-          ${isVisible ? 'ml-8 opacity-100' : '-ml-48 opacity-0'}
+          w-48 p-4 rounded-xl shadow-md
+          hover:shadow-lg transition-all duration-300
+          ${isVisible ? 'opacity-100' : 'opacity-0'}
         `}
+        style={{
+          height: 'calc(100vh - 64px)', // 32px top + 32px bottom = 64px total
+          marginTop: '32px',
+          marginLeft: isVisible ? '32px' : '-192px' // -192px = negative width of sidebar
+        }}
       >
-        {/* Pin indicator */}
-        <div
-          className={`
-            absolute bottom-4 right-4
-            h-2 w-2 rounded-full
-            ${isPinned ? 'bg-green-500' : 'bg-gray-300'}
-          `}
-          title={isPinned ? 'Sidebar is pinned' : 'Click to pin sidebar'}
-        />
+        <Button
+          onClick={handlePinClick}
+          variant="outline"
+          size="icon"
+          aria-label={isPinned ? 'Unpin sidebar' : 'Pin sidebar'}
+          className="pin-button absolute bottom-4 right-4 rounded-full w-10 h-10 flex items-center justify-center"
+        >
+          {showCollapseIcon ? (
+            <ChevronLeft className="w-5 h-5 transition-transform duration-200" />
+          ) : (
+            <ChevronRight className="w-5 h-5 transition-transform duration-200" />
+          )}
+        </Button>
 
-        {/* Navigation */}
         <nav className="flex-1">
           <ul className="space-y-1">
             {menuItems.map(item => (
               <li key={item.name}>
                 <Link
                   href={item.path}
-                  className="block px-4 py-2 rounded-lg text-base font-medium hover:bg-gray-100"
+                  className="block px-4 py-2 rounded-lg text-lg font-normal hover:bg-gray-100"
                 >
                   {item.name}
                 </Link>
@@ -94,7 +121,6 @@ export default function Sidebar() {
           </ul>
         </nav>
 
-        {/* Theme toggle */}
         <div className="pt-4 theme-toggle">
           <ThemeToggle />
         </div>

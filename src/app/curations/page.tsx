@@ -58,11 +58,6 @@ export default function CurationsPage() {
           title: "How To Be Successful by Sam Altman",
           url: "https://blog.samaltman.com/how-to-be-successful",
           description: "13 insights from Sam Altman on achieving outlier success."
-        },
-        {
-          title: "The Secular Systemic Shift: Deflation, Technology And Demographics",
-          url: "https://seekingalpha.com/article/4399567-the-secular-systemic-shift-deflation-technology-and-demographics",
-          description: "Analysis of how deflationary forces underpin a paradigm shift in economic systems."
         }
       ]
     },
@@ -77,7 +72,12 @@ export default function CurationsPage() {
         {
           title: "Peter Thiel: You Are Not a Lottery Ticket",
           url: "https://www.youtube.com/watch?v=iZM_JmZdqCw&t=1358s",
-          description: "Thiel explores whether success is driven by luck or design."
+          description: "Peter Thiel explores whether success is driven by luck or design."
+        },
+        {
+          title: "A.I., Mars and Immortality: Are We Dreaming Big Enough?",
+          url: "https://youtu.be/vV7YgnPUxcU?si=q7kNJGhzBATbbfMc",
+          description: "Peter Thiel's take on whether humanity is thinking big enough about AI, space, and longevity."
         },
         {
           title: "Wanderers – A Short Film by Erik Wernquist",
@@ -111,7 +111,7 @@ export default function CurationsPage() {
               pointer-events-none absolute bottom-full left-1/2 transform -translate-x-1/2
               mb-2 max-w-xs hidden group-hover:block group-focus:block
               bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-900
-              text-base px-3 py-2 rounded shadow-lg transition-opacity duration-150
+              text-lg px-3 py-2 rounded shadow-lg transition-opacity duration-150
               opacity-0 group-hover:opacity-100 group-focus:opacity-100 z-10
             "
             role="tooltip"
@@ -124,7 +124,7 @@ export default function CurationsPage() {
   )
 
   return (
-    <div className="flex flex-col items-start justify-start p-8 space-y-8 max-w-3xl">
+    <div className="flex flex-col items-start justify-start px-8 pb-8 space-y-8 max-w-3xl" style={{paddingTop: '64px'}}>
       <h1 className="text-3xl font-normal">Curations</h1>
 
       {sections.map(section => (

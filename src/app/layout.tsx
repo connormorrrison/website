@@ -30,9 +30,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 {children}
               </PageTransition>
             </div>
-            <footer className="py-2 px-8 text-center text-base mt-auto">
-              © {new Date().getFullYear()} Connor Morrison
-            </footer>
           </main>
         </ThemeProvider>
       </body>
