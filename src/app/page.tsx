@@ -36,14 +36,14 @@ export default function Home() {
     >
       {/* 1. Heading */}
       <h1 className="text-3xl font-normal text-foreground text-left">
-        Hi, I'm Connor
+        Hi, I&apos;m Connor
       </h1>
 
       {/* 2. Intro paragraph */}
       <p className="max-w-3xl text-lg text-foreground text-left">
-        I'm a computer science student at the University of British Columbia and a 
+        I&apos;m a computer science student at the University of British Columbia and a 
         finance graduate from the University of Alberta, building at the intersection 
-        of computer science and finance. I'm focused on software engineering, ML/AI, and fintech applications.
+        of computer science and finance. I&apos;m focused on software engineering, ML/AI, and fintech applications.
       </p>
       
       {/* Location */}

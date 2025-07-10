@@ -22,7 +22,7 @@ export default function CurationsPage() {
         {
           title: "Zero to One: Notes on Startups, or How to Build the Future",
           url: "https://www.amazon.com/Zero-One-Notes-Startups-Future/dp/0804139296",
-          description: "Peter Thiel's take on building monopolies through innovation."
+          description: "Peter Thiel&apos;s take on building monopolies through innovation."
         },
         {
           title: "Boom: Bubbles and the End of Stagnation",
@@ -42,7 +42,7 @@ export default function CurationsPage() {
         {
           title: "The Almanack of Naval Ravikant: A Guide to Wealth and Happiness",
           url: "https://www.amazon.com/Almanack-Naval-Ravikant-Wealth-Happiness-ebook/dp/B08FF8MTM6",
-          description: "Naval's distilled wisdom on decision‑making, habits, and long‑term thinking."
+          description: "Naval&apos;s distilled wisdom on decision‑making, habits, and long‑term thinking."
         }
       ]
     },
@@ -65,7 +65,7 @@ export default function CurationsPage() {
       label: "Videos",
       items: [
         {
-          title: "Steve Jobs' 2005 Stanford Commencement Address",
+          title: "Steve Jobs&apos; 2005 Stanford Commencement Address",
           url: "https://www.youtube.com/watch?v=UF8uR6Z6KLc",
           description: "One of the most inspiring speeches on following your intuition and staying hungry."
         },
@@ -77,12 +77,12 @@ export default function CurationsPage() {
         {
           title: "A.I., Mars and Immortality: Are We Dreaming Big Enough?",
           url: "https://youtu.be/vV7YgnPUxcU?si=q7kNJGhzBATbbfMc",
-          description: "Peter Thiel's take on whether humanity is thinking big enough about AI, space, and longevity."
+          description: "Peter Thiel&apos;s take on whether humanity is thinking big enough about AI, space, and longevity."
         },
         {
           title: "Wanderers – A Short Film by Erik Wernquist",
           url: "https://www.youtube.com/watch?v=YH3c1QZzRK4",
-          description: "A vision of humanity's expansion into the Solar System."
+          description: "A vision of humanity&apos;s expansion into the Solar System."
         }
       ]
     },

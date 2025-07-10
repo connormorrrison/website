@@ -14,7 +14,7 @@ export default function AboutPage() {
         <h2 className="text-xl font-normal text-foreground mb-2">Bio</h2>
         <p className="text-lg text-foreground">
           Aspiring software engineer building at the intersection of computer
-          science and finance. I'm passionate about capital and prediction markets, decentralized
+          science and finance. I&apos;m passionate about capital and prediction markets, decentralized
           technologies, and crafting elegant software for the fintech space.
         </p>
       </div>
