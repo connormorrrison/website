@@ -3,27 +3,22 @@ import Link from "next/link"
 import ContributionGraph from "@/components/contribution-graph"
 import React from "react"
 import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
 import { ArrowUpRight } from "lucide-react"
-
-const Badge = ({ text }: { text: string }) => (
-  <span className="px-3 py-1 rounded-full text-lg font-normal bg-white dark:bg-zinc-800 text-gray-800 dark:text-gray-100 border border-gray-300 dark:border-zinc-700">
-    {text}
-  </span>
-)
 
 export default function Home() {
   const techs = [
-    "TypeScript",
+    "Python",
+    "TypeScript", 
+    "Java",
     "React",
     "Next.js",
-    "Tailwind CSS",
-    "Python",
-    "PostgreSQL",
-    "Git",
     "FastAPI",
-    "Vercel",
-    "Linux / Bash",
-    "Pandas"
+    "PostgreSQL",
+    "Pandas",
+    "NumPy",
+    "Tailwind CSS",
+    "Linux"
   ]
 
   return (
@@ -60,7 +55,7 @@ export default function Home() {
           <Button
             variant="outline"
             size="default"
-            className="rounded-full h-16 px-10 text-lg font-normal"
+            className="rounded-full h-16 px-10 text-lg font-normal shadow-none border-gray-300 dark:border-zinc-700"
             aria-label="View Projects"
           >
             View Projects <ArrowUpRight className="ml-2 w-4 h-4" />
@@ -70,7 +65,7 @@ export default function Home() {
           <Button
             variant="outline"
             size="default"
-            className="rounded-full h-16 px-10 text-lg font-normal"
+            className="rounded-full h-16 px-10 text-lg font-normal shadow-none border-gray-300 dark:border-zinc-700"
             aria-label="Contact Me"
           >
             Contact Me <ArrowUpRight className="ml-2 w-4 h-4" />

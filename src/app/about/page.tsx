@@ -1,11 +1,7 @@
 "use client"
 import React from "react"
-
-const Badge = ({ text }: { text: string }) => (
-  <span className="px-3 py-1 rounded-full text-lg font-normal bg-white dark:bg-zinc-800 text-gray-800 dark:text-gray-100 border border-gray-300 dark:border-zinc-700">
-    {text}
-  </span>
-)
+import { Badge } from "@/components/ui/badge"
+import { Tile } from "@/components/ui/tile"
 
 export default function AboutPage() {
   return (
@@ -25,14 +21,14 @@ export default function AboutPage() {
       {/* Education */}
       <div className="flex flex-col space-y-4 w-full">
         <h2 className="text-xl font-normal">Education</h2>
-        <div className="w-full p-4 rounded-2xl border border-gray-200 shadow-base bg-white dark:bg-zinc-900">
+        <Tile>
           <h3 className="text-lg font-normal">University of British Columbia</h3>
           <p className="text-lg text-gray-700 dark:text-gray-300">Major in Computer Science</p>
-        </div>
-        <div className="w-full p-4 rounded-2xl border border-gray-200 shadow-base bg-white dark:bg-zinc-900">
+        </Tile>
+        <Tile>
           <h3 className="text-lg font-normal">University of Alberta</h3>
           <p className="text-lg text-gray-700 dark:text-gray-300">Major in Finance</p>
-        </div>
+        </Tile>
       </div>
 
       {/* Languages */}

@@ -1,11 +1,7 @@
 "use client"
 import React from "react"
-
-const Badge = ({ text }: { text: string }) => (
-  <span className="px-3 py-1 rounded-full text-lg font-normal bg-white dark:bg-zinc-800 text-gray-800 dark:text-gray-100 border border-gray-300 dark:border-zinc-700">
-    {text}
-  </span>
-)
+import { Badge } from "@/components/ui/badge"
+import { Tile } from "@/components/ui/tile"
 
 const projects = [
   {
@@ -41,14 +37,11 @@ export default function ProjectsPage() {
 
       <div className="grid grid-cols-1 gap-6">
         {projects.map((proj) => {
-          const borderStyle = proj.underConstruction
-            ? "border border-dashed border-gray-300"
-            : "border border-gray-200"
-
           return (
-            <div
+            <Tile
               key={proj.title}
-              className={`w-full max-w-3xl p-4 rounded-xl ${borderStyle} shadow-base flex flex-col justify-between`}
+              borderStyle={proj.underConstruction ? "dashed" : "solid"}
+              className="max-w-3xl flex flex-col justify-between"
             >
               <div>
                 <h2 className="text-xl font-normal mb-2">{proj.title}</h2>
@@ -79,7 +72,7 @@ export default function ProjectsPage() {
                   GitHub ↗
                 </a>
               </div>
-            </div>
+            </Tile>
           )
         })}
       </div>

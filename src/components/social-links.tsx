@@ -1,31 +1,27 @@
 "use client"
 import React from "react"
 import { Github, Linkedin, Mail } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { IconButton } from "@/components/ui/icon-button"
 
 export default function SocialLinks() {
   return (
     <div className="absolute flex space-x-4 z-10" style={{top: '32px', right: '32px'}}>
       {/* Email button */}
-      <Button
+      <IconButton
         asChild
-        variant="outline"
-        size="icon"
         aria-label="Email"
-        className="rounded-full w-10 h-10 flex items-center justify-center text-blue-600"
+        isExternal={true}
       >
         <a href="mailto:cm4@ualberta.ca">
           <Mail className="w-5 h-5" />
         </a>
-      </Button>
+      </IconButton>
       
       {/* LinkedIn button */}
-      <Button
+      <IconButton
         asChild
-        variant="outline"
-        size="icon"
         aria-label="LinkedIn"
-        className="rounded-full w-10 h-10 flex items-center justify-center text-blue-600"
+        isExternal={true}
       >
         <a
           href="https://www.linkedin.com/in/connormorrrison/"
@@ -34,15 +30,13 @@ export default function SocialLinks() {
         >
           <Linkedin className="w-5 h-5" />
         </a>
-      </Button>
+      </IconButton>
       
       {/* GitHub button */}
-      <Button
+      <IconButton
         asChild
-        variant="outline"
-        size="icon"
         aria-label="GitHub"
-        className="rounded-full w-10 h-10 flex items-center justify-center text-blue-600"
+        isExternal={true}
       >
         <a
           href="https://github.com/connormorrrison"
@@ -51,7 +45,7 @@ export default function SocialLinks() {
         >
           <Github className="w-5 h-5" />
         </a>
-      </Button>
+      </IconButton>
     </div>
   )
 }

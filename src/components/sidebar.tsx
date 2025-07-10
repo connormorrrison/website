@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { Card } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
+import { IconButton } from '@/components/ui/icon-button'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
@@ -82,7 +82,7 @@ export default function Sidebar() {
         onMouseLeave={handleMouseLeave}
         className={`
           relative flex flex-col
-          w-48 p-4 rounded-xl
+          w-48 p-4 rounded-xl border border-gray-300 dark:border-zinc-700 bg-background dark:bg-input/30 shadow-none
           transition-all duration-300
           ${isVisible ? 'opacity-100' : 'opacity-0'}
         `}
@@ -92,19 +92,17 @@ export default function Sidebar() {
           marginLeft: isVisible ? '32px' : '-192px' // -192px = negative width of sidebar
         }}
       >
-        <Button
+        <IconButton
           onClick={handlePinClick}
-          variant="outline"
-          size="icon"
           aria-label={isPinned ? 'Unpin sidebar' : 'Pin sidebar'}
-          className="pin-button absolute bottom-4 right-4 rounded-full w-10 h-10 flex items-center justify-center"
+          className="pin-button absolute bottom-4 right-4"
         >
           {showCollapseIcon ? (
             <ChevronLeft className="w-5 h-5 transition-transform duration-200" />
           ) : (
             <ChevronRight className="w-5 h-5 transition-transform duration-200" />
           )}
-        </Button>
+        </IconButton>
 
         <nav className="flex-1">
           <ul className="space-y-1">
