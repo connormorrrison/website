@@ -121,7 +121,7 @@ export default function Sidebar() {
               <li key={item.name}>
                 <Link
                   href={item.path}
-                  className="block px-4 py-2 rounded-lg text-lg font-normal text-foreground hover:bg-gray-100"
+                  className="block px-4 py-2 rounded-lg text-lg font-normal text-foreground hover:bg-accent hover:text-accent-foreground"
                 >
                   {item.name}
                 </Link>
