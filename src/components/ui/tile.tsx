@@ -14,7 +14,7 @@ export const Tile = ({ children, className, borderStyle = "solid" }: TileProps) 
 
   return (
     <div className={cn(
-      "w-full p-4 rounded-xl bg-background dark:bg-input/30",
+      "w-full p-4 rounded-xl bg-background/30 dark:bg-input/30",
       borderClass,
       className
     )}>

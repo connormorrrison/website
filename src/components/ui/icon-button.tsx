@@ -28,7 +28,7 @@ export const IconButton = ({
       onClick={onClick}
       asChild={asChild}
       className={cn(
-        "rounded-full w-10 h-10 flex items-center justify-center shadow-none border-gray-300 dark:border-zinc-700 bg-background dark:bg-input/30",
+        "rounded-full w-10 h-10 flex items-center justify-center shadow-none border-gray-300 dark:border-zinc-700 bg-background/30 dark:bg-input/30",
         isExternal && "text-blue-600",
         className
       )}

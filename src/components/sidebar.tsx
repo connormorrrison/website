@@ -93,7 +93,7 @@ export default function Sidebar() {
         onMouseLeave={handleMouseLeave}
         className={`
           relative flex flex-col
-          w-48 p-4 rounded-xl border border-gray-300 dark:border-zinc-700 bg-background dark:bg-input/30 shadow-none
+          w-48 p-4 rounded-xl border border-gray-300 dark:border-zinc-700 bg-background/30 dark:bg-input/30 shadow-none
           transition-all duration-300
           ${isVisible ? 'opacity-100' : 'opacity-0'}
         `}
