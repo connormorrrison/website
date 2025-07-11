@@ -71,6 +71,10 @@ export default function CurationsPage() {
         {
           title: "Wanderers – A Short Film by Erik Wernquist",
           url: "https://www.youtube.com/watch?v=YH3c1QZzRK4"
+        },
+        {
+          title: "Founder's Fund Opening Video",
+          url: "https://www.youtube.com/watch?v=Gvf547kGOXs"
         }
       ]
     },

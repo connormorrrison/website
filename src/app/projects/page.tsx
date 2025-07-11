@@ -7,7 +7,7 @@ const projects = [
   {
     title: "MockTrade",
     description:
-      "Full-stack trading simulator with real-time data, JWT auth, and interactive dashboards.",
+      "Full-stack trading simulator with real-time stock data, buy/sell execution, account authentication and management, portfolio tracking, and transaction history.",
     techs: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL"],
     url: "https://www.mocktrade.ca",
     githubUrl: "https://github.com/connormorrrison/MockTrade",
@@ -15,7 +15,7 @@ const projects = [
   {
     title: "Personal Website",
     description:
-      "Next.js + Tailwind CSS portfolio site with dark/light theme toggle and animated transitions.",
+      "Portfolio site built with Next.js, TypeScript, and Tailwind CSS.",
     techs: ["Next.js", "TypeScript", "Tailwind CSS"],
     url: "/",
     githubUrl: "https://github.com/connormorrrison/personal-website",
