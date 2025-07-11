@@ -53,19 +53,19 @@ export default function Home() {
         <Link href="/about" className="hover:bg-accent hover:text-accent-foreground transition-colors rounded-full">
           <Badge 
             text="About Me" 
-            icon={<User style={{width: '1.25rem', height: '1.25rem'}} />} 
+            icon={<User className="text-blue-600" style={{width: '1.25rem', height: '1.25rem'}} />} 
           />
         </Link>
         <Link href="/projects" className="hover:bg-accent hover:text-accent-foreground transition-colors rounded-full">
           <Badge 
             text="View Projects" 
-            icon={<Folder style={{width: '1.25rem', height: '1.25rem'}} />} 
+            icon={<Folder className="text-blue-600" style={{width: '1.25rem', height: '1.25rem'}} />} 
           />
         </Link>
         <Link href="/contact" className="hover:bg-accent hover:text-accent-foreground transition-colors rounded-full">
           <Badge 
             text="Contact Me" 
-            icon={<Mail style={{width: '1.25rem', height: '1.25rem'}} />} 
+            icon={<Mail className="text-blue-600" style={{width: '1.25rem', height: '1.25rem'}} />} 
           />
         </Link>
         <Badge 
