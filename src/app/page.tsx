@@ -48,7 +48,7 @@ export default function Home() {
       
       {/* Location */}
       <div className="flex items-center gap-2 text-lg text-foreground">
-        <MapPin className="!w-10 !h-10" />
+        <MapPin className="w-6 h-6 text-green-600" style={{width: '1.8rem', height: '1.8rem'}} />
         <span>Vancouver, BC</span>
       </div>
 
