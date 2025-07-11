@@ -45,7 +45,7 @@ export default function Home() {
         I&apos;m a computer science student at the University of British Columbia and a 
         finance graduate from the University of Alberta, building at the intersection 
         of computer science and finance. I&apos;m focused on software engineering, ML/AI, 
-        and fintech applications. Currently in Vancouver, BC.
+        and fintech applications. Based in Vancouver, BC.
       </p>
 
       {/* Actions */}
