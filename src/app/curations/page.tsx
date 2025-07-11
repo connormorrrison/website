@@ -78,7 +78,6 @@ export default function CurationsPage() {
     {
       label: "Miscellaneous",
       items: [
-        // add future items here
       ]
     }
   ]
@@ -104,6 +103,7 @@ export default function CurationsPage() {
     <div className="flex flex-col items-start justify-start px-8 pb-8 space-y-8 max-w-3xl" style={{paddingTop: '64px'}}>
       <h1 className="text-3xl font-normal text-foreground">Curations</h1>
 
+      {/* Sections */}
       {sections.map(section => (
         <div key={section.label} className="space-y-4">
           <h2 className="text-xl font-normal text-foreground">{section.label}</h2>

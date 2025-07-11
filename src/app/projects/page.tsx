@@ -36,6 +36,7 @@ export default function ProjectsPage() {
     <div className="px-8 pb-8 space-y-8 max-w-3xl" style={{paddingTop: '64px'}}>
       <h1 className="text-3xl font-normal text-foreground">Projects</h1>
 
+      {/* Projects List */}
       <div className="grid grid-cols-1 gap-6">
         {projects.map((proj) => {
           return (

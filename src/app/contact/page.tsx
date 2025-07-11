@@ -40,6 +40,7 @@ export default function ContactPage() {
         If you have a question, want to collaborate, or simply to say hi, feel free to reach out.
       </p>
       
+      {/* Social Links */}
       <ul className="space-y-2 text-lg">
         <li>
           <a
@@ -71,6 +72,7 @@ export default function ContactPage() {
         </li>
       </ul>
       
+      {/* Contact Form */}
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-md flex flex-col space-y-4 text-lg"

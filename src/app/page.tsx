@@ -34,12 +34,11 @@ export default function Home() {
       "
       style={{paddingTop: '64px'}}
     >
-      {/* 1. Heading */}
+      {/* Intro */}
       <h1 className="text-3xl font-normal text-foreground text-left">
         Hi, I&apos;m Connor
       </h1>
 
-      {/* 2. Intro paragraph */}
       <p className="max-w-3xl text-lg text-foreground text-left">
         I&apos;m a computer science student at the University of British Columbia and a 
         finance graduate from the University of Alberta, building at the intersection 
@@ -52,11 +51,8 @@ export default function Home() {
         <span>Vancouver, BC</span>
       </div>
 
-      {/* 3. Button row */}
-      {/* Changed to use flex-wrap and gap-2 for consistent spacing with the tech stack badges */}
+      {/* Actions */}
       <div className="flex flex-wrap" style={{gap: '12px'}}>
-        {/* Link components are assumed to be from Next.js, for a standalone React app
-         these would typically be anchor tags or a custom routing solution. */}
         <Link href="/projects" passHref>
           <Button
             variant="outline"
@@ -81,7 +77,7 @@ export default function Home() {
         </Link>
       </div>
 
-      {/* 4. Tech stack: constrain to prose width */}
+      {/* Tech Stack */}
       <div className="max-w-3xl">
         <h2 className="text-xl font-normal text-foreground text-left mb-3">
           Tech Stack
@@ -93,7 +89,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* 5. Contribution graph */}
+      {/* Contribution Graph */}
       <div className="w-full mt-10">
         <ContributionGraph />
       </div>

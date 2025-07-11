@@ -1,4 +1,3 @@
-// src/components/sidebar.tsx
 "use client"
 import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
@@ -26,7 +25,6 @@ export default function Sidebar() {
     { name: 'Contact', path: '/contact' },
   ]
 
-  // This function now only gets called by the button
   const togglePin = () => {
     const currentlyPinned = isPinned
     setIsPinned(!currentlyPinned)
@@ -41,7 +39,6 @@ export default function Sidebar() {
     }
   }
 
-  // Event handler for the pin button
   const handlePinClick = (e: React.MouseEvent) => {
     e.stopPropagation()
     togglePin()
@@ -59,10 +56,9 @@ export default function Sidebar() {
     }
   }
 
-  // Initialize responsive state
   useEffect(() => {
     setIsMounted(true)
-    const isMobile = window.innerWidth < 768 // Tailwind's md breakpoint
+    const isMobile = window.innerWidth < 768
     if (isMobile) {
       setIsPinned(false)
       setIsVisible(false)
@@ -86,7 +82,6 @@ export default function Sidebar() {
 
   const showCollapseIcon = (isPinned && !justPinned) || isCollapsing
 
-  // Don't render until mounted to avoid hydration issues
   if (!isMounted) {
     return null
   }
@@ -103,9 +98,9 @@ export default function Sidebar() {
           ${isVisible ? 'opacity-100' : 'opacity-0'}
         `}
         style={{
-          height: 'calc(100vh - 64px)', // 32px top + 32px bottom = 64px total
+          height: 'calc(100vh - 64px)',
           marginTop: '32px',
-          marginLeft: isVisible ? '32px' : '-192px' // -192px = negative width of sidebar
+          marginLeft: isVisible ? '32px' : '-192px'
         }}
       >
         <IconButton
