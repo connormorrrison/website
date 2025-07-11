@@ -2,7 +2,6 @@
 import React from "react"
 import { Badge } from "@/components/ui/badge"
 import { Tile } from "@/components/ui/tile"
-import { ArrowUpRight } from "lucide-react"
 
 const projects = [
   {
@@ -63,7 +62,7 @@ export default function ProjectsPage() {
                   rel="noopener noreferrer"
                   className="hover:underline"
                 >
-                  View <ArrowUpRight className="inline w-5 h-5" />
+                  View ↗
                 </a>
                 <a
                   href={proj.githubUrl}
@@ -71,7 +70,7 @@ export default function ProjectsPage() {
                   rel="noopener noreferrer"
                   className="hover:underline"
                 >
-                  GitHub <ArrowUpRight className="inline w-5 h-5" />
+                  GitHub ↗
                 </a>
               </div>
             </Tile>

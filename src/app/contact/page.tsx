@@ -1,6 +1,5 @@
 "use client"
 import React, { useState } from 'react'
-import { ArrowUpRight } from "lucide-react"
 
 export default function ContactPage() {
   const [name, setName] = useState('')
@@ -47,7 +46,7 @@ export default function ContactPage() {
             href="mailto:cm4@ualberta.ca"
             className="text-blue-600 hover:underline"
           >
-            Email <ArrowUpRight className="inline w-5 h-5" />
+            Email ↗
           </a>
         </li>
         <li>
@@ -57,7 +56,7 @@ export default function ContactPage() {
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
           >
-            LinkedIn <ArrowUpRight className="inline w-5 h-5" />
+            LinkedIn ↗
           </a>
         </li>
         <li>
@@ -67,7 +66,7 @@ export default function ContactPage() {
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
           >
-            GitHub <ArrowUpRight className="inline w-5 h-5" />
+            GitHub ↗
           </a>
         </li>
       </ul>

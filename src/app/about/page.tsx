@@ -2,7 +2,7 @@
 import React from "react"
 import { Badge } from "@/components/ui/badge"
 import { Tile } from "@/components/ui/tile"
-import { MapPin } from "lucide-react"
+import { MapPin, Plane } from "lucide-react"
 
 export default function AboutPage() {
   return (
@@ -22,10 +22,14 @@ export default function AboutPage() {
       {/* Location */}
       <div className="w-full">
         <h2 className="text-xl font-normal text-foreground mb-3">Location</h2>
-        <div className="flex">
+        <div className="flex" style={{gap: '12px'}}>
           <Badge 
             text="Vancouver, BC" 
-            icon={<MapPin className="text-green-600" style={{width: '1.5rem', height: '2.0rem'}} />} 
+            icon={<MapPin className="text-green-600" style={{width: '1.0rem', height: '2.0rem'}} />} 
+          />
+          <Badge 
+            text="Willing to relocate" 
+            icon={<Plane className="text-blue-600" style={{width: '1.0rem', height: '2.0rem'}} />} 
           />
         </div>
       </div>

@@ -2,9 +2,8 @@
 import Link from "next/link"
 import ContributionGraph from "@/components/contribution-graph"
 import React from "react"
-import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { ArrowUpRight, MapPin } from "lucide-react"
+import { Mail, Folder, User } from "lucide-react"
 
 export default function Home() {
   const techs = [
@@ -39,41 +38,35 @@ export default function Home() {
         <h1 className="text-3xl font-normal text-foreground text-left">
           Hi, I&apos;m Connor
         </h1>
-        <Badge 
-          text="Vancouver, BC" 
-          icon={<MapPin className="text-green-600" style={{width: '1.5rem', height: '2.0rem'}} />} 
-        />
+
       </div>
 
       <p className="max-w-3xl text-lg text-foreground text-left">
         I&apos;m a computer science student at the University of British Columbia and a 
         finance graduate from the University of Alberta, building at the intersection 
-        of computer science and finance. I&apos;m focused on software engineering, ML/AI, and fintech applications.
+        of computer science and finance. I&apos;m focused on software engineering, ML/AI, 
+        and fintech applications. Currently in Vancouver, BC.
       </p>
 
       {/* Actions */}
       <div className="flex flex-wrap" style={{gap: '12px'}}>
-        <Link href="/projects" passHref>
-          <Button
-            variant="outline"
-            size={null}
-            className="rounded-full text-lg font-normal shadow-none border-gray-300 dark:border-zinc-700"
-            style={{height: '3rem', paddingLeft: '1rem', paddingRight: '1rem'}}
-            aria-label="View Projects"
-          >
-            View Projects <ArrowUpRight className="ml-2 w-5 h-5" />
-          </Button>
+        <Link href="/about">
+          <Badge 
+            text="About Me" 
+            icon={<User style={{width: '1.0rem', height: '2.0rem'}} />} 
+          />
         </Link>
-        <Link href="/contact" passHref>
-          <Button
-            variant="outline"
-            size={null}
-            className="rounded-full text-lg font-normal shadow-none border-gray-300 dark:border-zinc-700"
-            style={{height: '3rem', paddingLeft: '1rem', paddingRight: '1rem'}}
-            aria-label="Contact Me"
-          >
-            Contact Me <ArrowUpRight className="ml-2 w-5 h-5" />
-          </Button>
+        <Link href="/projects">
+          <Badge 
+            text="View Projects" 
+            icon={<Folder style={{width: '1.0rem', height: '2.0rem'}} />} 
+          />
+        </Link>
+        <Link href="/contact">
+          <Badge 
+            text="Contact Me" 
+            icon={<Mail style={{width: '1.0rem', height: '2.0rem'}} />} 
+          />
         </Link>
       </div>
 
