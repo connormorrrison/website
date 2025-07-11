@@ -3,7 +3,7 @@ import Link from "next/link"
 import ContributionGraph from "@/components/contribution-graph"
 import React from "react"
 import { Badge } from "@/components/ui/badge"
-import { Mail, Folder, User } from "lucide-react"
+import { Mail, Folder, User, MapPin } from "lucide-react"
 
 export default function Home() {
   const techs = [
@@ -44,30 +44,34 @@ export default function Home() {
       <p className="max-w-3xl text-lg text-foreground text-left">
         I&apos;m a computer science student at the University of British Columbia and a 
         finance graduate from the University of Alberta, building at the intersection 
-        of computer science and finance. I&apos;m focused on software engineering, ML/AI, 
-        and fintech applications. Based in Vancouver, BC.
+        of computer science and finance. I&apos;m focused on software engineering, AI and machine learning, 
+        and fintech applications.
       </p>
 
       {/* Actions */}
       <div className="flex flex-wrap" style={{gap: '12px'}}>
-        <Link href="/about">
+        <Link href="/about" className="hover:bg-accent hover:text-accent-foreground transition-colors rounded-full">
           <Badge 
             text="About Me" 
-            icon={<User style={{width: '1.0rem', height: '2.0rem'}} />} 
+            icon={<User style={{width: '1.25rem', height: '1.25rem'}} />} 
           />
         </Link>
-        <Link href="/projects">
+        <Link href="/projects" className="hover:bg-accent hover:text-accent-foreground transition-colors rounded-full">
           <Badge 
             text="View Projects" 
-            icon={<Folder style={{width: '1.0rem', height: '2.0rem'}} />} 
+            icon={<Folder style={{width: '1.25rem', height: '1.25rem'}} />} 
           />
         </Link>
-        <Link href="/contact">
+        <Link href="/contact" className="hover:bg-accent hover:text-accent-foreground transition-colors rounded-full">
           <Badge 
             text="Contact Me" 
-            icon={<Mail style={{width: '1.0rem', height: '2.0rem'}} />} 
+            icon={<Mail style={{width: '1.25rem', height: '1.25rem'}} />} 
           />
         </Link>
+        <Badge 
+          text="Vancouver, BC" 
+          icon={<MapPin className="text-green-600" style={{width: '1.25rem', height: '1.25rem'}} />} 
+        />
       </div>
 
       {/* Tech Stack */}

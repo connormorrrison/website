@@ -13,23 +13,23 @@ export default function AboutPage() {
       <div className="w-full">
         <h2 className="text-xl font-normal text-foreground mb-2">Bio</h2>
         <p className="text-lg text-foreground">
-          Aspiring software engineer building at the intersection of computer
-          science and finance. I&apos;m passionate about capital and prediction markets, decentralized
-          technologies, and crafting elegant software for the fintech space.
+          Software engineer building at the intersection of computer
+          science and finance. I&apos;m passionate about financial markets,
+          AI and machine learning, problem solving, and crafting elegant software.
         </p>
       </div>
 
       {/* Location */}
       <div className="w-full">
         <h2 className="text-xl font-normal text-foreground mb-3">Location</h2>
-        <div className="flex" style={{gap: '12px'}}>
+        <div className="flex flex-wrap" style={{gap: '12px'}}>
           <Badge 
             text="Vancouver, BC" 
-            icon={<MapPin className="text-green-600" style={{width: '1.0rem', height: '2.0rem'}} />} 
+            icon={<MapPin className="text-green-600" style={{width: '1.25rem', height: '1.25rem'}} />} 
           />
           <Badge 
             text="Willing to relocate" 
-            icon={<Plane className="text-blue-600" style={{width: '1.0rem', height: '2.0rem'}} />} 
+            icon={<Plane className="text-blue-600" style={{width: '1.25rem', height: '1.25rem'}} />} 
           />
         </div>
       </div>
@@ -83,14 +83,13 @@ export default function AboutPage() {
         <div className="flex flex-wrap gap-2">
           {[
             "Software Engineering",
-            "ML/AI",
+            "AI",
+            "Machine Learning",
             "Fintech",
-            "Capital Markets",
-            "Prediction Markets",
-            "Web3",
+            "Financial Markets",
+            "Decentralization",
             "Startups",
-            "SaaS",
-            "UI/UX"
+            "Product Development"
           ].map((interest) => (
             <Badge key={interest} text={interest} />
           ))}

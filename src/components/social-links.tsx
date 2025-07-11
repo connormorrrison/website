@@ -13,7 +13,7 @@ export default function SocialLinks() {
         isExternal={true}
       >
         <a href="mailto:cm4@ualberta.ca">
-          <Mail className="w-5 h-5" />
+          <Mail style={{width: '1.25rem', height: '1.25rem'}} />
         </a>
       </IconButton>
       
@@ -28,7 +28,7 @@ export default function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Linkedin className="w-5 h-5" />
+          <Linkedin style={{width: '1.25rem', height: '1.25rem'}} />
         </a>
       </IconButton>
       
@@ -43,7 +43,7 @@ export default function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Github className="w-5 h-5" />
+          <Github style={{width: '1.25rem', height: '1.25rem'}} />
         </a>
       </IconButton>
     </div>

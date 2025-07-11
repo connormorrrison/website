@@ -109,9 +109,9 @@ export default function Sidebar() {
           className="pin-button absolute bottom-4 right-4"
         >
           {showCollapseIcon ? (
-            <PanelRightOpen className="w-5 h-5 transition-transform duration-200" />
+            <PanelRightOpen className="transition-transform duration-200" style={{width: '1.25rem', height: '1.25rem'}} />
           ) : (
-            <PanelRightClose className="w-5 h-5 transition-transform duration-200" />
+            <PanelRightClose className="transition-transform duration-200" style={{width: '1.25rem', height: '1.25rem'}} />
           )}
         </IconButton>
 
