@@ -5,7 +5,7 @@ import { IconButton } from "@/components/ui/icon-button"
 
 export default function SocialLinks() {
   return (
-    <div className="absolute flex gap-2 z-10" style={{top: '32px', right: '32px'}}>
+    <div className="absolute flex z-10" style={{top: '32px', right: '32px', gap: '12px'}}>
       {/* Email button */}
       <IconButton
         asChild

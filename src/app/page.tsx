@@ -54,7 +54,7 @@ export default function Home() {
 
       {/* 3. Button row */}
       {/* Changed to use flex-wrap and gap-2 for consistent spacing with the tech stack badges */}
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap" style={{gap: '12px'}}>
         {/* Link components are assumed to be from Next.js, for a standalone React app
          these would typically be anchor tags or a custom routing solution. */}
         <Link href="/projects" passHref>
@@ -86,7 +86,7 @@ export default function Home() {
         <h2 className="text-xl font-normal text-foreground text-left mb-3">
           Tech Stack
         </h2>
-        <div className="flex flex-wrap justify-start gap-2">
+        <div className="flex flex-wrap justify-start" style={{gap: '12px'}}>
           {techs.map((tech) => (
             <Badge key={tech} text={tech} />
           ))}
