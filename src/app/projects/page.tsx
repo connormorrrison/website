@@ -13,14 +13,6 @@ const projects = [
     githubUrl: "https://github.com/connormorrrison/MockTrade",
   },
   {
-    title: "Personal Website",
-    description:
-      "Portfolio site built with Next.js, TypeScript, and Tailwind CSS.",
-    techs: ["Next.js", "TypeScript", "Tailwind CSS"],
-    url: "/",
-    githubUrl: "https://github.com/connormorrrison/personal-website",
-  },
-  {
     title: "OpenCoding",
     description: "Under construction.",
     techs: ["Next.js", "TypeScript"],
