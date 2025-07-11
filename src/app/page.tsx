@@ -48,7 +48,7 @@ export default function Home() {
       
       {/* Location */}
       <div className="flex items-center gap-2 text-lg text-foreground">
-        <MapPin className="!w-5 !h-5" />
+        <MapPin className="!w-10 !h-10" />
         <span>Vancouver, BC</span>
       </div>
 
@@ -60,7 +60,9 @@ export default function Home() {
         <Link href="/projects" passHref>
           <Button
             variant="outline"
-            className="rounded-full !h-16 !px-10 text-lg font-normal shadow-none border-gray-300 dark:border-zinc-700"
+            size={null}
+            className="rounded-full text-lg font-normal shadow-none border-gray-300 dark:border-zinc-700"
+            style={{height: '3rem', paddingLeft: '1rem', paddingRight: '1rem'}}
             aria-label="View Projects"
           >
             View Projects <ArrowUpRight className="ml-2 w-5 h-5" />
@@ -69,7 +71,9 @@ export default function Home() {
         <Link href="/contact" passHref>
           <Button
             variant="outline"
-            className="rounded-full !h-16 !px-10 text-lg font-normal shadow-none border-gray-300 dark:border-zinc-700"
+            size={null}
+            className="rounded-full text-lg font-normal shadow-none border-gray-300 dark:border-zinc-700"
+            style={{height: '3rem', paddingLeft: '1rem', paddingRight: '1rem'}}
             aria-label="Contact Me"
           >
             Contact Me <ArrowUpRight className="ml-2 w-5 h-5" />
@@ -91,7 +95,6 @@ export default function Home() {
 
       {/* 5. Contribution graph */}
       <div className="w-full mt-10">
-        {/* ContributionGraph component is assumed to be defined elsewhere */}
         <ContributionGraph />
       </div>
     </div>
