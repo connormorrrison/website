@@ -23,6 +23,10 @@ export default function CurationsPage() {
           url: "https://www.amazon.com/Zero-One-Notes-Startups-Future/dp/0804139296"
         },
         {
+          title: "Super Founders: What Data Reveals About Billion-Dollar Startups",
+          url: "https://www.amazon.com/Super-Founders-Reveals-Billion-Dollar-Startups/dp/1541768426"
+        },
+        {
           title: "Boom: Bubbles and the End of Stagnation",
           url: "https://www.amazon.com/Boom-Bubbles-Stagnation-Byrne-Hobart/dp/1953953476"
         },
@@ -31,12 +35,12 @@ export default function CurationsPage() {
           url: "https://www.amazon.com/Sapiens-History-Humankind-Yuval-Harari/dp/0062316095"
         },
         {
-          title: "Principles of Building AI Agents",
-          url: "https://www.amazon.com/Principles-Building-Agents-Sam-Bhagwat/dp/B0DYH5GHDD"
-        },
-        {
           title: "The Almanack of Naval Ravikant: A Guide to Wealth and Happiness",
           url: "https://www.amazon.com/Almanack-Naval-Ravikant-Wealth-Happiness-ebook/dp/B08FF8MTM6"
+        },
+        {
+          title: "Principles of Building AI Agents",
+          url: "https://www.amazon.com/Principles-Building-Agents-Sam-Bhagwat/dp/B0DYH5GHDD"
         }
       ]
     },
