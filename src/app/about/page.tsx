@@ -22,9 +22,11 @@ export default function AboutPage() {
       {/* Location */}
       <div className="w-full">
         <h2 className="text-xl font-normal text-foreground mb-3">Location</h2>
-        <div className="flex items-center gap-2 text-lg text-foreground">
-          <MapPin className="w-6 h-6 text-green-600" style={{width: '1.8rem', height: '1.8rem'}} />
-          <span>Vancouver, BC</span>
+        <div className="flex">
+          <Badge 
+            text="Vancouver, BC" 
+            icon={<MapPin className="text-green-600" style={{width: '1.5rem', height: '2.0rem'}} />} 
+          />
         </div>
       </div>
 

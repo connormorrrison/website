@@ -35,21 +35,21 @@ export default function Home() {
       style={{paddingTop: '64px'}}
     >
       {/* Intro */}
-      <h1 className="text-3xl font-normal text-foreground text-left">
-        Hi, I&apos;m Connor
-      </h1>
+      <div className="flex items-center flex-wrap" style={{gap: '32px'}}>
+        <h1 className="text-3xl font-normal text-foreground text-left">
+          Hi, I&apos;m Connor
+        </h1>
+        <Badge 
+          text="Vancouver, BC" 
+          icon={<MapPin className="text-green-600" style={{width: '1.5rem', height: '2.0rem'}} />} 
+        />
+      </div>
 
       <p className="max-w-3xl text-lg text-foreground text-left">
         I&apos;m a computer science student at the University of British Columbia and a 
         finance graduate from the University of Alberta, building at the intersection 
         of computer science and finance. I&apos;m focused on software engineering, ML/AI, and fintech applications.
       </p>
-      
-      {/* Location */}
-      <div className="flex items-center gap-2 text-lg text-foreground">
-        <MapPin className="w-6 h-6 text-green-600" style={{width: '1.8rem', height: '1.8rem'}} />
-        <span>Vancouver, BC</span>
-      </div>
 
       {/* Actions */}
       <div className="flex flex-wrap" style={{gap: '12px'}}>
