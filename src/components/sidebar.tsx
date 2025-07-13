@@ -14,7 +14,8 @@ export default function Sidebar() {
   const [isCollapsing, setIsCollapsing] = useState(false)
   const [justPinned, setJustPinned] = useState(false)
   const sidebarRef = useRef<HTMLDivElement>(null)
-  const HOVER_THRESHOLD = 200
+  const DESKTOP_HOVER_THRESHOLD = 200
+  const MOBILE_HOVER_THRESHOLD = 50
 
   const menuItems = [
     { name: 'Home', path: '/' },
@@ -68,7 +69,9 @@ export default function Sidebar() {
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (!isPinned) {
-        const isNearLeftEdge = e.clientX <= HOVER_THRESHOLD
+        const isMobile = window.innerWidth < 768
+        const threshold = isMobile ? MOBILE_HOVER_THRESHOLD : DESKTOP_HOVER_THRESHOLD
+        const isNearLeftEdge = e.clientX <= threshold
         setIsHovered(isNearLeftEdge)
         setIsVisible(isNearLeftEdge)
       }
