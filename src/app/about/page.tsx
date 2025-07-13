@@ -13,9 +13,9 @@ export default function AboutPage() {
       <div className="w-full">
         <h2 className="text-xl font-normal text-foreground mb-2">Bio</h2>
         <p className="text-lg text-foreground">
-          Aspiring software engineer building at the intersection of computer
-          science and finance. I&apos;m passionate about financial markets,
-          AI and machine learning, problem solving, and crafting elegant software.
+          I&apos;m an aspiring software engineer building at the intersection of computer science and 
+          finance. I&apos;m passionate about financial markets, AI and machine learning, problem 
+          solving, and crafting elegant software.
         </p>
       </div>
 

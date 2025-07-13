@@ -42,10 +42,9 @@ export default function Home() {
       </div>
 
       <p className="max-w-3xl text-lg text-foreground text-left">
-        I&apos;m a computer science student at the University of British Columbia and a 
-        finance graduate from the University of Alberta, building at the intersection 
-        of computer science and finance. I&apos;m focused on software engineering, AI and machine learning, 
-        and fintech applications.
+        I&apos;m a computer science student at the University of British Columbia and a finance graduate 
+        from the University of Alberta. I&apos;m building at the intersection of computer science and 
+        finance, focusing on software engineering, AI and machine learning, and fintech applications.
       </p>
 
       {/* Actions */}
