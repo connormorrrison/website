@@ -24,7 +24,7 @@ export default function AboutPage() {
         <h2 className="text-xl font-normal text-foreground mb-3">Location</h2>
         <div className="flex flex-wrap" style={{gap: '12px'}}>
           <Badge 
-            text="Vancouver, BC" 
+            text="Vancouver, British Columbia" 
             icon={<MapPin className="text-green-600" style={{width: '1.25rem', height: '1.25rem'}} />} 
           />
           <Badge 

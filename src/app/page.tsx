@@ -68,7 +68,7 @@ export default function Home() {
           />
         </Link>
         <Badge 
-          text="Vancouver, BC" 
+          text="Vancouver, British Columbia" 
           icon={<MapPin className="text-green-600" style={{width: '1.25rem', height: '1.25rem'}} />} 
         />
       </div>
