@@ -2,82 +2,83 @@
 import Link from "next/link"
 import ContributionGraph from "@/components/contribution-graph"
 import React from "react"
-import { Badge } from "@/components/ui/badge"
+import { Badge } from "@/components/badge"
+import { Button2 } from "@/components/button-2"
+import { Text1 } from "@/components/text-1"
+import { Text2 } from "@/components/text-2"
+import { Text3 } from "@/components/text-3"
+import { PageLayout } from "@/components/page-layout"
 import { Mail, Folder, User, MapPin } from "lucide-react"
 
 export default function Home() {
   const techs = [
     "Python",
-    "TypeScript", 
     "Java",
+    "TypeScript",
     "React",
     "Next.js",
+    "Tailwind CSS",
     "FastAPI",
     "PostgreSQL",
     "Pandas",
     "NumPy",
-    "Tailwind CSS",
     "Linux"
   ]
 
   return (
-    <div
-      className="
-        flex flex-col
-        w-full h-full
-        max-w-3xl
-        items-start
-        justify-start
-        space-y-8
-        px-8 pb-8
-      "
-      style={{paddingTop: '64px'}}
-    >
+    <PageLayout>
       {/* Intro */}
       <div className="flex items-center flex-wrap" style={{gap: '32px'}}>
-        <h1 className="text-3xl font-normal text-foreground text-left">
+        <Text1>
           Hi, I&apos;m Connor
-        </h1>
+        </Text1>
 
       </div>
 
-      <p className="max-w-3xl text-lg text-foreground text-left">
+      <Text3 as="p" className="max-w-3xl">
         I&apos;m a computer science student at the University of British Columbia and a finance graduate 
         from the University of Alberta. I&apos;m building at the intersection of computer science and 
         finance, focusing on software engineering, AI and machine learning, and fintech applications.
-      </p>
+      </Text3>
 
       {/* Actions */}
       <div className="flex flex-wrap" style={{gap: '12px'}}>
-        <Link href="/about" className="hover:bg-accent hover:text-accent-foreground transition-colors rounded-full">
-          <Badge 
-            text="About Me" 
-            icon={<User className="text-blue-600" style={{width: '1.25rem', height: '1.25rem'}} />} 
-          />
-        </Link>
-        <Link href="/projects" className="hover:bg-accent hover:text-accent-foreground transition-colors rounded-full">
-          <Badge 
-            text="View Projects" 
-            icon={<Folder className="text-blue-600" style={{width: '1.25rem', height: '1.25rem'}} />} 
-          />
-        </Link>
-        <Link href="/contact" className="hover:bg-accent hover:text-accent-foreground transition-colors rounded-full">
-          <Badge 
-            text="Contact Me" 
-            icon={<Mail className="text-blue-600" style={{width: '1.25rem', height: '1.25rem'}} />} 
-          />
-        </Link>
+        <Button2 
+          asChild
+          text="About Me"
+          icon={<User />}
+          aria-label="About Me"
+        >
+          <Link href="/about" />
+        </Button2>
+        <Button2 
+          asChild
+          text="View Projects"
+          icon={<Folder />}
+          aria-label="View Projects"
+        >
+          <Link href="/projects" />
+        </Button2>
+        <Button2 
+          asChild
+          text="Contact Me"
+          icon={<Mail />}
+          aria-label="Contact Me"
+        >
+          <Link href="/contact" />
+        </Button2>
         <Badge 
-          text="Vancouver, BC" 
-          icon={<MapPin className="text-green-600" style={{width: '1.25rem', height: '1.25rem'}} />} 
+          text="Vancouver, BC"
+          icon={<MapPin />}
+          iconColor="green"
         />
       </div>
 
       {/* Tech Stack */}
       <div className="max-w-3xl">
-        <h2 className="text-xl font-normal text-foreground text-left mb-3">
+        <Text2 className="mb-2">
           Tech Stack
-        </h2>
+        </Text2>
         <div className="flex flex-wrap justify-start" style={{gap: '12px'}}>
           {techs.map((tech) => (
             <Badge key={tech} text={tech} />
@@ -86,9 +87,9 @@ export default function Home() {
       </div>
 
       {/* Contribution Graph */}
-      <div className="w-full mt-10">
+      <div className="w-full">
         <ContributionGraph />
       </div>
-    </div>
+    </PageLayout>
   )
 }

@@ -3,7 +3,7 @@
 import { useTheme } from "next-themes"
 import { useState, useEffect } from "react"
 import { Sun, Moon } from "lucide-react"
-import { IconButton } from "@/components/ui/icon-button"
+import { Button2 } from "@/components/button-2"
 
 export function ThemeToggle() {
   const { setTheme, resolvedTheme } = useTheme()
@@ -18,11 +18,11 @@ export function ThemeToggle() {
   const isDark = resolvedTheme === "dark"
 
   return (
-    <IconButton
+    <Button2
       aria-label="Toggle theme"
       onClick={() => setTheme(isDark ? "light" : "dark")}
     >
       {isDark ? <Sun style={{width: '1.25rem', height: '1.25rem'}} /> : <Moon style={{width: '1.25rem', height: '1.25rem'}} />}
-    </IconButton>
+    </Button2>
   )
 }

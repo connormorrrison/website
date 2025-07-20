@@ -1,5 +1,10 @@
 "use client"
 import React, { useState } from 'react'
+import { TextField } from "@/components/text-field"
+import { Button1 } from "@/components/button-1"
+import { Text1 } from "@/components/text-1"
+import { Text3 } from "@/components/text-3"
+import { PageLayout } from "@/components/page-layout"
 
 export default function ContactPage() {
   const [name, setName] = useState('')
@@ -32,82 +37,82 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="flex flex-col items-start justify-start px-8 pb-8 space-y-8 max-w-3xl" style={{paddingTop: '64px'}}>
-      <h1 className="text-3xl font-normal text-foreground">Contact</h1>
+    <PageLayout>
+      <Text1>Contact</Text1>
       
-      <p className="text-lg text-foreground">
+      <Text3 as="p">
         If you have a question, want to collaborate, or simply to say hi, feel free to reach out.
-      </p>
+      </Text3>
       
-      {/* Social Links */}
-      <ul className="space-y-2 text-lg">
+      {/* Contact Methods */}
+      <ul className="space-y-2">
         <li>
-          <a
+          <Text3 as="a"
             href="mailto:cm4@ualberta.ca"
-            className="text-blue-600 hover:underline"
+            className="hover:underline"
+            variant="blue"
           >
             Email ↗
-          </a>
+          </Text3>
         </li>
         <li>
-          <a
+          <Text3 as="a"
             href="https://www.linkedin.com/in/connormorrrison/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline"
+            className="hover:underline"
+            variant="blue"
           >
             LinkedIn ↗
-          </a>
+          </Text3>
         </li>
         <li>
-          <a
+          <Text3 as="a"
             href="https://github.com/connormorrrison"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline"
+            className="hover:underline"
+            variant="blue"
           >
             GitHub ↗
-          </a>
+          </Text3>
         </li>
       </ul>
       
       {/* Contact Form */}
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-md flex flex-col space-y-4 text-lg"
+        className="w-full max-w-md flex flex-col space-y-4"
       >
-        <input
+        <TextField
           type="text"
           placeholder="Name"
           value={name}
           onChange={e => setName(e.target.value)}
-          className="w-full px-4 py-2 text-lg text-muted-foreground bg-background dark:bg-input/30 border border-gray-300 dark:border-zinc-700 rounded-lg focus:outline-none focus:ring"
         />
-        <input
+        <TextField
           type="email"
           placeholder="Email*"
           value={email}
           onChange={e => setEmail(e.target.value)}
           required
-          className="w-full px-4 py-2 text-lg text-muted-foreground bg-background dark:bg-input/30 border border-gray-300 dark:border-zinc-700 rounded-lg focus:outline-none focus:ring"
         />
-        <textarea
+        <TextField
+          variant="large"
           placeholder="Message*"
           value={message}
           onChange={e => setMessage(e.target.value)}
           required
-          className="w-full px-4 py-2 text-lg text-muted-foreground bg-background dark:bg-input/30 border border-gray-300 dark:border-zinc-700 rounded-lg focus:outline-none focus:ring h-32 resize-none"
         />
-        <button
+        <Button1
           type="submit"
           disabled={status === 'sending'}
-          className="px-6 py-2 text-lg font-normal text-white bg-blue-600 border border-gray-300 dark:border-zinc-700 rounded-lg hover:bg-blue-700 disabled:opacity-50 shadow-none"
         >
           {status === 'sending' ? 'Sending...' : 'Send Message'}
-        </button>
-        {status === 'sent' && <p className="text-green-600">Message sent!</p>}
-        {status === 'error' && <p className="text-red-600">Failed to send.</p>}
+        </Button1>
+        {status === 'sent' && <Text3 as="p" variant="green">Message sent!</Text3>}
+        {status === 'error' && <Text3 as="p" variant="red">Failed to send.</Text3>}
       </form>
-    </div>
+    </PageLayout>
   )
 }

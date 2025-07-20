@@ -2,6 +2,10 @@
 
 import React from "react"
 import Link from "next/link"
+import { Text1 } from "@/components/text-1"
+import { Text2 } from "@/components/text-2"
+import { Text3 } from "@/components/text-3"
+import { PageLayout } from "@/components/page-layout"
 
 interface Item {
   title: string
@@ -90,33 +94,34 @@ export default function CurationsPage() {
   ]
 
   const renderList = (items: Item[]) => (
-    <ul className="space-y-2 text-lg">
+    <ul className="space-y-2">
       {items.map((item, i) => (
         <li key={item.url + i}>
-          <Link
+          <Text3 as={Link}
             href={item.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline focus:outline-none focus:ring"
+            className="hover:underline focus:outline-none focus:ring"
+            variant="blue"
           >
             {item.title} ↗
-          </Link>
+          </Text3>
         </li>
       ))}
     </ul>
   )
 
   return (
-    <div className="flex flex-col items-start justify-start px-8 pb-8 space-y-8 max-w-3xl" style={{paddingTop: '64px'}}>
-      <h1 className="text-3xl font-normal text-foreground">Curations</h1>
+    <PageLayout>
+      <Text1>Curations</Text1>
 
       {/* Sections */}
       {sections.map(section => (
-        <div key={section.label} className="space-y-4">
-          <h2 className="text-xl font-normal text-foreground">{section.label}</h2>
+        <div key={section.label}>
+          <Text2 className="mb-2">{section.label}</Text2>
           {renderList(section.items)}
         </div>
       ))}
-    </div>
+    </PageLayout>
   )
 }
