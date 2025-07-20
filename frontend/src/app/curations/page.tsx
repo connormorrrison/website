@@ -1,7 +1,6 @@
 "use client"
 
 import React from "react"
-import Link from "next/link"
 import { Text1 } from "@/components/text-1"
 import { Text2 } from "@/components/text-2"
 import { Text3 } from "@/components/text-3"
@@ -97,7 +96,7 @@ export default function CurationsPage() {
     <ul className="space-y-2">
       {items.map((item, i) => (
         <li key={item.url + i}>
-          <Text3 as={Link}
+          <Text3 as="a"
             href={item.url}
             target="_blank"
             rel="noopener noreferrer"
