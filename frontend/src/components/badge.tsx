@@ -29,10 +29,10 @@ export const Badge = ({
       )}
       style={{ borderColor: 'light-dark(oklch(0.922 0 0), oklch(1 0 0 / 10%))' }}
     >
-      {icon && React.cloneElement(icon as React.ReactElement<any>, {
+      {icon && React.isValidElement(icon) && React.cloneElement(icon as React.ReactElement<{ className?: string; style?: React.CSSProperties }>, {
         className: cn(defaultIconColor, `hover:${defaultHoverColor}`, "transition-colors"),
         style: { width: '1.25rem', height: '1.25rem' },
-        ...((icon as React.ReactElement<any>).props || {})
+        ...(icon.props || {})
       })}
       <span>{text}</span>
     </span>

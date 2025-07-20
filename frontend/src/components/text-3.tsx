@@ -4,9 +4,9 @@ import { cn } from "@/lib/utils"
 interface Text3Props {
   children: React.ReactNode
   className?: string
-  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "div" | "span" | "p" | "a" | React.ComponentType<any>
+  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "div" | "span" | "p" | "a" | React.ComponentType
   variant?: "default" | "muted" | "blue" | "green" | "red"
-  [key: string]: any
+  [key: string]: unknown
 }
 
 export const Text3 = ({ children, className, as: Component = "h3", variant = "default", ...props }: Text3Props) => {

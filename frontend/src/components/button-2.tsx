@@ -33,12 +33,11 @@ export const Button2 = ({
 }: Button2Props) => {
   // If text is provided, use Badge with interactive behavior
   if (text) {
-    if (asChild) {
-      const child = children as React.ReactElement<any>
-      return React.cloneElement(child, {
+    if (asChild && React.isValidElement(children)) {
+      return React.cloneElement(children as React.ReactElement<{ className?: string; children?: React.ReactNode }>, {
         className: cn(
           "cursor-pointer rounded-full hover:bg-accent hover:text-accent-foreground transition-colors",
-          child.props?.className
+          (children.props as { className?: string }).className
         ),
         children: (
           <Badge 
