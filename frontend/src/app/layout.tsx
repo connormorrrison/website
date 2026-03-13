@@ -1,7 +1,6 @@
 import "./globals.css"
 import Sidebar from "@/components/sidebar"
 import { ThemeProvider } from "@/components/theme-provider"
-import PageTransition from "@/components/page-transition"
 import SocialLinks from "@/components/social-links"
 
 export const metadata = {
@@ -20,17 +19,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           enableSystem
           disableTransitionOnChange
         >
-          <aside className="h-screen sticky top-0">
+          <aside className="h-screen sticky top-0 shrink-0">
             <Sidebar />
           </aside>
           <SocialLinks />
           <main className="flex-1 flex flex-col overflow-auto">
             <div className="flex-grow p-8">
-              <PageTransition>
-                {children}
-              </PageTransition>
+              {children}
             </div>
           </main>
+          <div className="hidden md:block shrink-0 w-56" aria-hidden />
         </ThemeProvider>
       </body>
     </html>

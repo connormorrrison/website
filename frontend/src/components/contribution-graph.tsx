@@ -10,15 +10,15 @@ interface Cell {
   base: number;
 }
 
-export default function ContributionGraph() {
-  const ROWS = 7;
+export default function ContributionGraph({ vertical = false }: { vertical?: boolean }) {
   const CELL_SIZE = 10;
   const CELL_GAP = 4;
   const OUTER_PAD = 8;
-  const MAX_COLS = 80;
+  const FIXED_COUNT = 7; // rows in horizontal mode, cols in vertical mode
+  const MAX_DYNAMIC = 80;
 
   const [cells, setCells] = useState<Cell[]>([]);
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0, cols: 0 });
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0, dynamicCount: 0 });
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const animationFrameRef = useRef<number | null>(null);
@@ -45,58 +45,52 @@ export default function ContributionGraph() {
   };
 
   useEffect(() => {
-    const calculateDimensions = (width: number) => {
-      if (width === 0) return;
-      
-      const availableWidth = width - OUTER_PAD * 2 + CELL_GAP;
-      const newCols = Math.min(
-        MAX_COLS,
-        Math.floor(availableWidth / (CELL_SIZE + CELL_GAP))
-      );
+    const calculateDimensions = (size: number) => {
+      if (size === 0) return;
+      const available = size - OUTER_PAD * 2 + CELL_GAP;
+      const dynamicCount = Math.min(MAX_DYNAMIC, Math.floor(available / (CELL_SIZE + CELL_GAP)));
 
-      if (newCols > 0) {
-        const newWidth = newCols * (CELL_SIZE + CELL_GAP) + OUTER_PAD * 2 - CELL_GAP;
-        const newHeight = ROWS * (CELL_SIZE + CELL_GAP) + OUTER_PAD * 2 - CELL_GAP;
+      if (dynamicCount > 0) {
+        const dynamicDim = dynamicCount * (CELL_SIZE + CELL_GAP) + OUTER_PAD * 2 - CELL_GAP;
+        const fixedDim = FIXED_COUNT * (CELL_SIZE + CELL_GAP) + OUTER_PAD * 2 - CELL_GAP;
+        const newWidth = vertical ? fixedDim : dynamicDim;
+        const newHeight = vertical ? dynamicDim : fixedDim;
 
-        setDimensions(currentDims => {
-          if (currentDims.width !== newWidth || currentDims.height !== newHeight) {
-            return { width: newWidth, height: newHeight, cols: newCols };
+        setDimensions(current => {
+          if (current.width !== newWidth || current.height !== newHeight || current.dynamicCount !== dynamicCount) {
+            return { width: newWidth, height: newHeight, dynamicCount };
           }
-          return currentDims;
+          return current;
         });
       } else {
-        setDimensions({ width: 0, height: 0, cols: 0 });
+        setDimensions({ width: 0, height: 0, dynamicCount: 0 });
       }
     };
 
     const observer = new ResizeObserver((entries) => {
       const entry = entries[0];
       if (entry) {
-        calculateDimensions(entry.contentRect.width);
+        const size = vertical ? entry.contentRect.height : entry.contentRect.width;
+        calculateDimensions(size);
       }
     });
 
     const container = containerRef.current;
-    if (container) {
-      observer.observe(container);
-    }
-
-    return () => {
-      if (container) {
-        observer.unobserve(container);
-      }
-    };
-  }, []);
+    if (container) observer.observe(container);
+    return () => { if (container) observer.unobserve(container); };
+  }, [vertical]);
 
   useEffect(() => {
-    if (dimensions.cols === 0) return;
+    if (dimensions.dynamicCount === 0) return;
+    const rows = vertical ? dimensions.dynamicCount : FIXED_COUNT;
+    const cols = vertical ? FIXED_COUNT : dimensions.dynamicCount;
 
     const init: Cell[] = [];
-    for (let y = 0; y < ROWS; y++) {
-      for (let x = 0; x < dimensions.cols; x++) {
+    for (let row = 0; row < rows; row++) {
+      for (let col = 0; col < cols; col++) {
         init.push({
-          x: OUTER_PAD + x * (CELL_SIZE + CELL_GAP),
-          y: OUTER_PAD + y * (CELL_SIZE + CELL_GAP),
+          x: OUTER_PAD + col * (CELL_SIZE + CELL_GAP),
+          y: OUTER_PAD + row * (CELL_SIZE + CELL_GAP),
           opacity: Math.random() * 0.7 + 0.1,
           pulseSpeed: (Math.random() * 0.02 + 0.005) * 0.5,
           pulseDir: Math.random() > 0.5 ? 1 : -1,
@@ -108,7 +102,7 @@ export default function ContributionGraph() {
       }
     }
     setCells(init);
-  }, [dimensions.cols]);
+  }, [dimensions.dynamicCount, vertical]);
 
   const animate = useCallback(() => {
     if (!canvasRef.current || !cells.length) return;
@@ -157,7 +151,11 @@ export default function ContributionGraph() {
   }, [animate, dimensions]);
 
   return (
-    <div ref={containerRef} className="w-full flex justify-start overflow-hidden">
+    <div
+      ref={containerRef}
+      className={vertical ? "h-full flex flex-col justify-start overflow-hidden" : "w-full flex justify-start overflow-hidden"}
+      style={vertical ? { width: `${dimensions.width}px` } : undefined}
+    >
       <canvas
         ref={canvasRef}
         style={{
