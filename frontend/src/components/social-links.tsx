@@ -1,11 +1,12 @@
 "use client"
 import React from "react"
-import { Github, Linkedin, Mail } from "lucide-react"
+import { motion } from "motion/react"
+import { LucideGithub, LucideLinkedin, Mail } from "lucide-react"
 import { Button2 } from "@/components/button-2"
 
 export default function SocialLinks() {
   return (
-    <div className="absolute flex z-10" style={{top: '32px', right: '32px', gap: '12px'}}>
+    <motion.div className="absolute flex z-10" style={{top: '32px', right: '32px', gap: '12px'}} initial={{ opacity: 0, filter: "blur(10px)" }} animate={{ opacity: 1, filter: "blur(0px)" }} transition={{ duration: 0.6 }}>
       {/* Email button */}
       <Button2
         asChild
@@ -28,7 +29,7 @@ export default function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Linkedin style={{width: '1.25rem', height: '1.25rem'}} />
+          <LucideLinkedin style={{width: '1.25rem', height: '1.25rem'}} />
         </a>
       </Button2>
       
@@ -43,9 +44,9 @@ export default function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Github style={{width: '1.25rem', height: '1.25rem'}} />
+          <LucideGithub style={{width: '1.25rem', height: '1.25rem'}} />
         </a>
       </Button2>
-    </div>
+    </motion.div>
   )
 }

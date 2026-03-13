@@ -1,5 +1,6 @@
 "use client"
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
+import { motion } from "motion/react"
 import { Badge } from "@/components/badge"
 import { Button2 } from "@/components/button-2"
 import { Button1 } from "@/components/button-1"
@@ -9,6 +10,7 @@ import { Text1 } from "@/components/text-1"
 import { Text2 } from "@/components/text-2"
 import { Text3 } from "@/components/text-3"
 import { ImageLightbox } from "@/components/image-lightbox"
+
 import { scrollToSection } from "@/lib/scroll"
 import { Mail, Folder, User, MapPin, Plane } from "lucide-react"
 
@@ -149,6 +151,11 @@ export default function Home() {
   const [message, setMessage] = useState('')
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
 
+  useEffect(() => {
+    const main = document.querySelector('main')
+    if (main) main.scrollTo({ top: 0, behavior: 'instant' })
+  }, [])
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus('sending')
@@ -174,11 +181,11 @@ export default function Home() {
   }
 
   return (
-    <div className="max-w-3xl px-4 md:px-8 mx-auto">
+    <div className="max-w-3xl mx-auto">
 
       {/* Home */}
       <section id="home" className="py-12" style={{ scrollMarginTop: '2rem' }}>
-        <div className="flex flex-col space-y-6">
+        <motion.div className="flex flex-col space-y-6" initial={{ opacity: 0, filter: "blur(10px)" }} whileInView={{ opacity: 1, filter: "blur(0px)" }} transition={{ duration: 0.6 }} viewport={{ once: true, margin: "-100px" }}>
           <Text1>Hi, I&apos;m Connor</Text1>
 
           <Text3 as="p">
@@ -212,12 +219,12 @@ export default function Home() {
               iconColor="green"
             />
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* About */}
       <section id="about" className="py-12" style={{ scrollMarginTop: '2rem' }}>
-        <div className="flex flex-col space-y-6">
+        <motion.div className="flex flex-col space-y-6" initial={{ opacity: 0, filter: "blur(10px)" }} whileInView={{ opacity: 1, filter: "blur(0px)" }} transition={{ duration: 0.6 }} viewport={{ once: true, margin: "-100px" }}>
           <Text1>About</Text1>
 
           <Text3 as="p">
@@ -256,12 +263,12 @@ export default function Home() {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Education */}
       <section id="education" className="py-12" style={{ scrollMarginTop: '2rem' }}>
-        <div className="flex flex-col space-y-6">
+        <motion.div className="flex flex-col space-y-6" initial={{ opacity: 0, filter: "blur(10px)" }} whileInView={{ opacity: 1, filter: "blur(0px)" }} transition={{ duration: 0.6 }} viewport={{ once: true, margin: "-100px" }}>
           <Text1>Education</Text1>
 
           <div className="flex flex-wrap" style={{ gap: '12px' }}>
@@ -274,12 +281,12 @@ export default function Home() {
               <Text3 as="p" variant="muted">Bachelor of Commerce, Major in Finance</Text3>
             </Tile>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Experience */}
       <section id="experience" className="py-12" style={{ scrollMarginTop: '2rem' }}>
-        <div className="flex flex-col space-y-6">
+        <motion.div className="flex flex-col space-y-6" initial={{ opacity: 0, filter: "blur(10px)" }} whileInView={{ opacity: 1, filter: "blur(0px)" }} transition={{ duration: 0.6 }} viewport={{ once: true, margin: "-100px" }}>
           <Text1>Experience</Text1>
 
           <Tile>
@@ -298,12 +305,12 @@ export default function Home() {
               <li><Text3>Collaborated with the project lead on platform architecture and technical requirements during regular planning sessions.</Text3></li>
             </ul>
           </Tile>
-        </div>
+        </motion.div>
       </section>
 
       {/* Projects */}
       <section id="projects" className="py-12" style={{ scrollMarginTop: '2rem' }}>
-        <div className="flex flex-col space-y-6">
+        <motion.div className="flex flex-col space-y-6" initial={{ opacity: 0, filter: "blur(10px)" }} whileInView={{ opacity: 1, filter: "blur(0px)" }} transition={{ duration: 0.6 }} viewport={{ once: true, margin: "-100px" }}>
           <Text1>Projects</Text1>
 
           <div className="flex flex-col" style={{ gap: '24px' }}>
@@ -403,12 +410,12 @@ export default function Home() {
               </Tile>
             ))}
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Skills */}
       <section id="skills" className="py-12" style={{ scrollMarginTop: '2rem' }}>
-        <div className="flex flex-col space-y-6">
+        <motion.div className="flex flex-col space-y-6" initial={{ opacity: 0, filter: "blur(10px)" }} whileInView={{ opacity: 1, filter: "blur(0px)" }} transition={{ duration: 0.6 }} viewport={{ once: true, margin: "-100px" }}>
           <Text1>Skills</Text1>
 
           <div className="w-full">
@@ -437,12 +444,12 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Contact */}
       <section id="contact" className="py-12" style={{ scrollMarginTop: '2rem' }}>
-        <div className="flex flex-col space-y-6">
+        <motion.div className="flex flex-col space-y-6" initial={{ opacity: 0, filter: "blur(10px)" }} whileInView={{ opacity: 1, filter: "blur(0px)" }} transition={{ duration: 0.6 }} viewport={{ once: true, margin: "-100px" }}>
           <Text1>Contact</Text1>
 
           <Text3 as="p">
@@ -516,7 +523,7 @@ export default function Home() {
             {status === 'sent' && <Text3 as="p" variant="green">Message sent!</Text3>}
             {status === 'error' && <Text3 as="p" variant="red">Failed to send.</Text3>}
           </form>
-        </div>
+        </motion.div>
       </section>
 
       <ImageLightbox
