@@ -33,7 +33,7 @@ type Project = {
 const projects: Project[] = [
   {
     title: "MockTrade",
-    subtitle: "Full-Stack Stock Trading Simulator",
+    subtitle: "MockTrade is a full-stack stock trading simulator for users to practice trading with virtual cash, track performance, and compete on a leaderboard.",
     tags: ["Personal Project"],
     bullets: [
       "Built and deployed a full-stack stock trading simulator at mocktrade.ca where users practice trading with virtual cash, track portfolio performance, and compete on a real-time leaderboard.",
@@ -48,7 +48,7 @@ const projects: Project[] = [
   },
   {
     title: "Benevity Automated Campaign Kits MVP",
-    subtitle: "AI-Powered Humanitarian Campaign Generation Platform",
+    subtitle: "Benevity Automated Campaign Kits MVP is an AI-powered platform for auto-generating humanitarian campaign kits from emerging global crises.",
     tags: ["Academic Project", "CPSC 319 - Software Engineering Project"],
     bullets: [
       "Architected a modular data ingestion engine with pluggable source adapters for Google News, WHO Disease Outbreak News, RSS feeds, and GDACS, with a multi-phase article scraping pipeline using Server-Sent Events streaming, parallel LLM relevance scoring via ThreadPoolExecutor, and real-time progress reporting.",
@@ -61,11 +61,18 @@ const projects: Project[] = [
     timeline: "Jan 2025 – Apr 2025",
     url: "",
     githubUrl: "",
-    images: [],
+    images: [
+      "/images/projects/benevity/benevity-image-1.jpeg",
+      "/images/projects/benevity/benevity-image-2.jpeg",
+      "/images/projects/benevity/benevity-image-3.jpeg",
+      "/images/projects/benevity/benevity-image-4.jpeg",
+      "/images/projects/benevity/benevity-image-5.jpeg",
+      "/images/projects/benevity/benevity-image-6.jpeg"
+    ],
   },
   {
     title: "ChecKin",
-    subtitle: "AI-Powered Health Check-In Platform for Elderly Care",
+    subtitle: "ChecKin is an AI-powered health check-in platform designed for caretakers to monitor and manage elderly patients.",
     tags: ["Hackathon", "UBC BizTech ProduHacks 2026"],
     bullets: [
       "Built the entire Next.js frontend application from scratch, including project scaffolding, component architecture, and a reusable UI component library (buttons, cards, inputs, progress bars, navigation, scroll-reveal animations).",
@@ -82,7 +89,7 @@ const projects: Project[] = [
   },
   {
     title: "Solomon",
-    subtitle: "Prediction Market Trading Platform",
+    subtitle: "Solomon is a prediction market trading platform integrating Polymarket to track and execute Bitcoin binary options trades.",
     tags: ["Personal Project"],
     underConstruction: true,
     bullets: [
@@ -99,7 +106,7 @@ const projects: Project[] = [
   },
   {
     title: "Stock Management DSL",
-    subtitle: "Domain-Specific Language for Portfolio Management",
+    subtitle: "Stock Management DSL is a domain-specific language and terminal UI for querying, managing, and analyzing stock portfolios.",
     tags: ["Academic Project", "CPSC 410 - Advanced Software Engineering"],
     bullets: [
       "Built the complete Report Generation system with a modular architecture — ReportCalculator (financial computations), ReportFormatter (box-drawing table rendering), and ReportCreator (orchestration layer) — including a REST API endpoint that aggregates live portfolio, watchlist, and market data.",
@@ -115,7 +122,7 @@ const projects: Project[] = [
   },
   {
     title: "InsightUBC",
-    subtitle: "Full-Stack Educational Data Analytics Platform",
+    subtitle: "InsightUBC is a full-stack educational data analytics platform for querying and visualizing university course data.",
     tags: ["Academic Project", "CPSC 310 - Introduction to Software Engineering"],
     bullets: [
       "Designed and implemented a complete query validation and execution engine in TypeScript, supporting recursive WHERE clause evaluation (AND/OR/NOT/GT/LT/EQ/IS), GROUP BY aggregation with composite keys, APPLY operations (MAX, MIN, AVG, SUM, COUNT) using Decimal.js precision arithmetic, and multi-key directional sorting.",
@@ -131,7 +138,7 @@ const projects: Project[] = [
   },
   {
     title: "ParkShare",
-    subtitle: "Peer-to-Peer Parking Marketplace",
+    subtitle: "ParkShare is a peer-to-peer parking marketplace for users to find, book, and rent out parking spots.",
     tags: ["Hackathon", "UBC BizTech KickStart 2025"],
     bullets: [
       "Architected and implemented the complete FastAPI REST API with JWT authentication, bcrypt password hashing, CRUD endpoints for parking spots and bookings, time-overlap conflict detection, and double-booking prevention.",
@@ -148,7 +155,7 @@ const projects: Project[] = [
   },
   {
     title: "Jobnt",
-    subtitle: "AI-Powered Job Application Tool",
+    subtitle: "Jobnt is an AI-powered job application tool for parsing details and generating ATS-optimized LaTeX resumes.",
     tags: ["Hackathon", "nwPlus HackCamp 2025"],
     bullets: [
       "Scaffolded the entire Next.js frontend from scratch, configuring shadcn/ui, Tailwind CSS, dark mode theming, and motion animations, and built all UI components including Sidebar, InputBar, and DownloadButton.",
@@ -166,8 +173,9 @@ const projects: Project[] = [
 
 const skills = {
   languages: ["Python", "Java", "TypeScript", "C", "Rust", "Golang", "RISC-V"],
-  frameworks: ["React", "Next.js", "Tailwind CSS", "FastAPI", "Pandas", "NumPy", "Matplotlib", "SciPy", "SciKit-Learn"],
-  technologies: ["PostgreSQL", "Linux", "Bash", "Git", "Claude Code"],
+  frameworks: ["React", "Next.js", "Tailwind CSS", "FastAPI", "shadcn/ui"],
+  libraries: ["pandas", "NumPy", "Matplotlib", "SciPy", "scikit-learn"],
+  developerTools: ["PostgreSQL", "Linux", "Bash", "Git", "Claude Code", "Docker", "Google Cloud Platform (GCP)", "Visual Studio", "IntelliJ"],
 }
 
 export default function Home() {
@@ -334,7 +342,7 @@ export default function Home() {
             </Tile>
             <Tile>
               <Text3>University of Alberta</Text3>
-              <Text3 as="p" variant="muted">Bachelor of Commerce, Major in Finance</Text3>
+              <Text3 as="p" variant="muted">Bachelor of Commerce (BCom), Major in Finance</Text3>
             </Tile>
           </div>
         </motion.div>
@@ -346,7 +354,7 @@ export default function Home() {
           <Text1>Experience</Text1>
 
           <Tile>
-            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4 mb-3">
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
               <div>
                 <Text2>Software Developer</Text2>
                 <Text3 variant="muted">Atria Community · Vancouver, BC</Text3>
@@ -356,10 +364,6 @@ export default function Home() {
                 <Text3 variant="muted">Nov 2025 – Present</Text3>
               </div>
             </div>
-            <ul className="list-disc list-outside pl-8 space-y-1">
-              <li><Text3>Designed the entity-relationship diagram and database schema for a community organizing platform connecting Vancouver businesses and non-profits.</Text3></li>
-              <li><Text3>Collaborated with the project lead on platform architecture and technical requirements during regular planning sessions.</Text3></li>
-            </ul>
           </Tile>
         </motion.div>
       </section>
@@ -396,11 +400,18 @@ export default function Home() {
                       {/* Collapsed header — always visible, clickable */}
                       <button
                         onClick={() => setExpandedProject(isExpanded ? null : proj.title)}
-                        className="w-full flex items-center justify-between gap-4 text-left cursor-pointer"
+                        className="w-full flex items-start justify-between gap-4 text-left cursor-pointer"
                       >
-                        <Text2>{proj.title}</Text2>
-                        <div className="flex items-center gap-3 flex-shrink-0">
-                          <Text3 variant="muted" className="hidden sm:block text-right">{proj.subtitle}</Text3>
+                        <div className="flex flex-col gap-1 min-w-0">
+                          <Text2>{proj.title}</Text2>
+                          <Text3 variant="muted">{proj.subtitle}</Text3>
+                          <div className="flex flex-wrap mt-1" style={{ gap: '6px' }}>
+                            {proj.techs.map((t) => (
+                              <Badge key={t} text={t} />
+                            ))}
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-3 flex-shrink-0 mt-1">
                           <motion.div
                             animate={{ rotate: isExpanded ? 180 : 0 }}
                             transition={{ duration: 0.2 }}
@@ -516,7 +527,7 @@ export default function Home() {
           </div>
 
           <div className="w-full">
-            <Text2 className="mb-2">Frameworks &amp; Libraries</Text2>
+            <Text2 className="mb-2">Frameworks</Text2>
             <div className="flex flex-wrap" style={{ gap: '12px' }}>
               {skills.frameworks.map((fw) => (
                 <Badge key={fw} text={fw} />
@@ -525,10 +536,19 @@ export default function Home() {
           </div>
 
           <div className="w-full">
-            <Text2 className="mb-2">Technologies</Text2>
+            <Text2 className="mb-2">Developer Tools</Text2>
             <div className="flex flex-wrap" style={{ gap: '12px' }}>
-              {skills.technologies.map((tech) => (
-                <Badge key={tech} text={tech} />
+              {skills.developerTools.map((tool) => (
+                <Badge key={tool} text={tool} />
+              ))}
+            </div>
+          </div>
+
+          <div className="w-full">
+            <Text2 className="mb-2">Libraries</Text2>
+            <div className="flex flex-wrap" style={{ gap: '12px' }}>
+              {skills.libraries.map((lib) => (
+                <Badge key={lib} text={lib} />
               ))}
             </div>
           </div>
@@ -616,13 +636,7 @@ export default function Home() {
 
       {/* Full-screen projects grid modal */}
       {portalMounted && showAllProjects && ReactDOM.createPortal(
-        <motion.div
-          className="fixed inset-0 z-50 flex items-start justify-center overflow-auto"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-        >
+        <div className="fixed inset-0 z-50 flex items-start justify-center overflow-auto">
           {/* Backdrop */}
           <motion.div
             className="fixed inset-0 bg-background/80 backdrop-blur-sm"
@@ -631,86 +645,101 @@ export default function Home() {
             animate={{ opacity: 1 }}
           />
 
-          {/* Close button */}
-          <motion.button
-            className="fixed top-6 right-6 z-50 p-2 rounded-xl bg-background/80 border cursor-pointer"
-            style={{ borderColor: 'light-dark(oklch(0.922 0 0), oklch(1 0 0 / 10%))' }}
-            onClick={() => setShowAllProjects(false)}
+          {/* Close button — Button2 at same position as GitHub icon */}
+          <motion.div
+            className="fixed z-50"
+            style={{ top: '32px', right: '32px' }}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ type: 'spring', stiffness: 400, damping: 25, delay: 0.1 }}
           >
-            <X size={20} />
-          </motion.button>
+            <Button2
+              aria-label="Close"
+              onClick={() => setShowAllProjects(false)}
+            >
+              <X style={{ width: '1.25rem', height: '1.25rem' }} />
+            </Button2>
+          </motion.div>
 
-          {/* Grid */}
-            <div className="relative z-10 w-full max-w-7xl px-8 py-16">
-              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
-                {projects.map((proj) => (
-                  <motion.div
-                    key={proj.title}
-                    layoutId={`project-card-${proj.title}`}
-                    transition={{ type: 'spring', stiffness: 200, damping: 26 }}
-                    className="w-full p-4 rounded-xl shadow-none bg-background/30 dark:bg-input/30 border flex flex-col h-full"
-                    style={{
-                      borderColor: 'light-dark(oklch(0.922 0 0), oklch(1 0 0 / 10%))',
-                      ...(proj.underConstruction ? { borderStyle: 'dashed' } : {}),
-                    }}
-                  >
-                    {/* Screenshot carousel */}
-                    {proj.images.length > 0 && (
-                      <div className="mb-3 -mx-1 -mt-1">
-                        <ImageCarousel
-                          images={proj.images}
-                          alt={proj.title}
-                          onImageClick={(i) => { setShowAllProjects(false); setLightbox({ images: proj.images, index: i }) }}
-                        />
-                      </div>
-                    )}
+          {/* Masonry — zooms in like image lightbox */}
+          <motion.div
+            className="relative z-10 w-full max-w-5xl px-8 py-16"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 25 }}
+          >
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {projects.map((proj) => (
+                <div
+                  key={proj.title}
+                  className="p-4 rounded-xl bg-background/30 dark:bg-input/30 border flex flex-col"
+                  style={{
+                    borderColor: 'light-dark(oklch(0.922 0 0), oklch(1 0 0 / 10%))',
+                    ...(proj.underConstruction ? { borderStyle: 'dashed' } : {}),
+                  }}
+                >
+                  {/* Screenshot carousel */}
+                  {proj.images.length > 0 && (
+                    <div className="mb-3 -mx-1 -mt-1">
+                      <ImageCarousel
+                        images={proj.images}
+                        alt={proj.title}
+                        onImageClick={(i) => { setShowAllProjects(false); setLightbox({ images: proj.images, index: i }) }}
+                      />
+                    </div>
+                  )}
 
-                    <Text2>{proj.title}</Text2>
-                    <Text3 variant="muted" className="mb-3">{proj.subtitle}</Text3>
-                    <Text3 variant="muted" className="mb-3">{proj.timeline}</Text3>
+                  <Text2>{proj.title}</Text2>
+                  <Text3 variant="muted" className="mt-1">{proj.timeline}</Text3>
+                  <Text3 variant="muted" className="mt-1">{proj.subtitle}</Text3>
 
-                    {/* Tech badges */}
-                    <div className="flex flex-wrap mt-auto" style={{ gap: '6px' }}>
-                      {proj.techs.map((t) => (
+                  {/* Tech badges */}
+                  <div className="flex flex-wrap mt-3" style={{ gap: '6px' }}>
+                    {proj.techs.map((t) => (
+                      <Badge key={t} text={t} />
+                    ))}
+                  </div>
+
+                  {proj.tags && (
+                    <div className="flex flex-wrap gap-2 mt-3">
+                      {proj.tags.map((t) => (
                         <Badge key={t} text={t} />
                       ))}
                     </div>
+                  )}
 
-                    {/* Links */}
-                    {(proj.githubUrl || proj.url) && (
-                      <div className="flex gap-4 mt-3">
-                        {proj.githubUrl && (
-                          <Text3 as="a"
-                            href={proj.githubUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:underline"
-                            variant="blue"
-                          >
-                            GitHub ↗
-                          </Text3>
-                        )}
-                        {proj.url && (
-                          <Text3 as="a"
-                            href={proj.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:underline"
-                            variant="blue"
-                          >
-                            Live Site ↗
-                          </Text3>
-                        )}
-                      </div>
-                    )}
-                  </motion.div>
-                ))}
-              </div>
+                  {/* Links */}
+                  {(proj.githubUrl || proj.url) && (
+                    <div className="flex gap-4 mt-3">
+                      {proj.githubUrl && (
+                        <Text3 as="a"
+                          href={proj.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:underline"
+                          variant="blue"
+                        >
+                          GitHub ↗
+                        </Text3>
+                      )}
+                      {proj.url && (
+                        <Text3 as="a"
+                          href={proj.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:underline"
+                          variant="blue"
+                        >
+                          Live Site ↗
+                        </Text3>
+                      )}
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
-        </motion.div>,
+          </motion.div>
+        </div>,
         document.body
       )}
 
