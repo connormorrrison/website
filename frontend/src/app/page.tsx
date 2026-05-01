@@ -125,7 +125,7 @@ const projects: Project[] = [
     subtitle: "Solomon is a full-stack trading bot that generates signals for cryptocurrency prediction markets and simulates execution against a virtual bankroll. A live dashboard tracks portfolio performance, active positions, and P&L with configurable risk controls.",
     underConstruction: true,
     techs: ["React", "TypeScript", "Tailwind CSS", "Python", "FastAPI", "Polymarket API"],
-    timeline: "February 2025 – Present (In Development)",
+    timeline: "February 2026 – Present (In Development)",
     url: "",
     githubUrl: "https://github.com/connormorrrison/solomon",
     videoUrl: "",
