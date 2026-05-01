@@ -68,7 +68,7 @@ export function ImageCarousel({ images, alt, onImageClick }: ImageCarouselProps)
         {/* Prev arrow */}
         {canScrollPrev && (
           <button
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 p-1.5 rounded-full border cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity"
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border cursor-pointer flex items-center justify-center"
             style={{
               background: 'light-dark(oklch(0.98 0 0 / 90%), oklch(0.2 0 0 / 90%))',
               borderColor: 'light-dark(oklch(0.922 0 0), oklch(1 0 0 / 10%))',
@@ -76,14 +76,14 @@ export function ImageCarousel({ images, alt, onImageClick }: ImageCarouselProps)
             onClick={() => api?.scrollPrev()}
             aria-label="Previous image"
           >
-            <ChevronLeft size={16} />
+            <ChevronLeft style={{ width: '1.25rem', height: '1.25rem' }} />
           </button>
         )}
 
         {/* Next arrow */}
         {canScrollNext && (
           <button
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 p-1.5 rounded-full border cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity"
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border cursor-pointer flex items-center justify-center"
             style={{
               background: 'light-dark(oklch(0.98 0 0 / 90%), oklch(0.2 0 0 / 90%))',
               borderColor: 'light-dark(oklch(0.922 0 0), oklch(1 0 0 / 10%))',
@@ -91,7 +91,7 @@ export function ImageCarousel({ images, alt, onImageClick }: ImageCarouselProps)
             onClick={() => api?.scrollNext()}
             aria-label="Next image"
           >
-            <ChevronRight size={16} />
+            <ChevronRight style={{ width: '1.25rem', height: '1.25rem' }} />
           </button>
         )}
         {/* Dot indicators */}
@@ -103,7 +103,7 @@ export function ImageCarousel({ images, alt, onImageClick }: ImageCarouselProps)
             {images.map((_, i) => (
               <button
                 key={i}
-                className="rounded-full transition-all cursor-pointer"
+                className="rounded-full transition-all cursor-pointer border-none p-0"
                 style={{
                   width: i === current ? '16px' : '6px',
                   height: '6px',

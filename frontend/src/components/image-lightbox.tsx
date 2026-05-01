@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useState } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { ChevronLeft, ChevronRight, X } from "lucide-react"
 import { Dialog as DialogPrimitive } from "radix-ui"
 import { Dialog, DialogPortal, DialogOverlay, DialogTitle } from "@/components/ui/dialog"
 import { Button2 } from "@/components/button-2"
@@ -47,6 +47,11 @@ export function ImageLightbox({ images, index, alt = "Screenshot", onClose }: Im
           className="fixed top-[50%] left-[50%] z-50 translate-x-[-50%] translate-y-[-50%] p-0 border-0 bg-transparent shadow-none max-w-[90vw] w-auto outline-none data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 duration-200"
         >
           <DialogTitle className="sr-only">{alt}</DialogTitle>
+          <div className="absolute top-3 right-3 z-20">
+            <Button2 aria-label="Close" onClick={onClose}>
+              <X style={{ width: '1.25rem', height: '1.25rem' }} />
+            </Button2>
+          </div>
           {images && (
             <Carousel
               key={String(isOpen) + index}

@@ -6,6 +6,9 @@ import SocialLinks from "@/components/social-links"
 export const metadata = {
   title: "Connor Morrison",
   description: "Software Engineer",
+  icons: {
+    icon: "/favicon.svg",
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

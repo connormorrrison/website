@@ -81,7 +81,7 @@ export const Button2 = ({
       onClick={onClick}
       asChild={asChild}
       className={cn(
-        "rounded-full w-10 h-10 flex items-center justify-center shadow-none border bg-background/30 dark:bg-input/30 text-foreground",
+        "rounded-full w-10 h-10 flex items-center justify-center shadow-none border bg-background/30 dark:bg-input/30 text-foreground cursor-pointer",
         isExternal && "text-blue-600",
         className
       )}
