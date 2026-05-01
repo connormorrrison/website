@@ -104,7 +104,7 @@ const projects: Project[] = [
     title: "InsightUBC",
     subtitle: "InsightUBC is a full-stack academic data analysis tool built as a capstone project for CPSC 310 (Introduction to Software Engineering). Users can upload datasets, run complex queries with filtering, grouping, and aggregation, and visualize insights such as average grades by course, pass/fail rates, and top-ranked professors through interactive charts.",
     techs: ["TypeScript", "React", "Vite", "Tailwind CSS", "Chart.js", "Node.js", "Express", "Mocha"],
-    timeline: "September 2025 – December 2025",
+    timeline: "September 2025 – November 2025",
     url: "",
     githubUrl: "",
     videoUrl: "https://youtu.be/JkU4tYLu6WY",
