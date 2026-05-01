@@ -1,5 +1,6 @@
 "use client"
 import React, { useEffect, useState } from "react"
+import Image from "next/image"
 import { ChevronLeft, ChevronRight, X } from "lucide-react"
 import { Dialog as DialogPrimitive } from "radix-ui"
 import { Dialog, DialogPortal, DialogOverlay, DialogTitle } from "@/components/ui/dialog"
@@ -61,9 +62,11 @@ export function ImageLightbox({ images, index, alt = "Screenshot", onClose }: Im
               <CarouselContent className="ml-0">
                 {images.map((src, i) => (
                   <CarouselItem key={i} className="pl-0 flex items-center justify-center">
-                    <img
+                    <Image
                       src={src}
                       alt={`${alt} ${i + 1}`}
+                      width={1920}
+                      height={1080}
                       className="max-w-[90vw] max-h-[90vh] rounded-xl object-contain block"
                     />
                   </CarouselItem>

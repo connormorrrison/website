@@ -36,7 +36,7 @@ const projects: Project[] = [
     title: "MockTrade",
     subtitle: "MockTrade is a full-stack stock trading simulator where users practice buying and selling real stocks with virtual cash. Users can track portfolio performance through interactive charts, monitor market indices, build watchlists, and compete on a real-time leaderboard.",
     featured: true,
-    techs: ["React", "TypeScript", "TailwindCSS", "Python", "FastAPI", "PostgreSQL"],
+    techs: ["React", "TypeScript", "Tailwind CSS", "Python", "FastAPI", "PostgreSQL"],
     timeline: "November 2024 – Present",
     url: "https://www.mocktrade.ca",
     githubUrl: "https://github.com/connormorrrison/mocktrade",
@@ -47,7 +47,7 @@ const projects: Project[] = [
     title: "Benevity Automated Campaign Kits",
     subtitle: <>Benevity Automated Campaign Kits is a capstone project for CPSC 319 (Software Engineering Project), built in partnership with <Text3 as="a" href="https://benevity.com/" target="_blank" rel="noopener noreferrer" className="hover:underline" variant="blue">Benevity</Text3>. An AI-powered platform that monitors global crises in real-time and generates donation campaign kits from verified news sources. Features LLM-powered event discovery, citation-grounded campaign copy generation via Gemini AI, Benevity API nonprofit matching, and a draft-to-publish workflow.</>,
     featured: true,
-    techs: ["React", "TypeScript", "Tailwind CSS", "Python", "FastAPI", "PostgreSQL", "Google Vertex AI"],
+    techs: ["React", "TypeScript", "Tailwind CSS", "Python", "FastAPI", "PostgreSQL", "Google Vertex AI", "Google Cloud Platform (GCP)"],
     timeline: "January 2026 – April 2026",
     url: "",
     githubUrl: "",
@@ -62,7 +62,7 @@ const projects: Project[] = [
   },
   {
     title: "CodeScope",
-    subtitle: "CodeScope is a VS Code extension and capstone project built for CPSC 410 (Advanced Software Engineering) that provides real-time program analysis for TypeScript/JavaScript functions. It visualizes data flows as interactive Mermaid diagrams, estimates runtime complexity through dynamic execution, detects structural duplicates across the workspace, locates function usages, and generates natural-language summaries via LLM.",
+    subtitle: "CodeScope is a VS Code extension built as a capstone project for CPSC 410 (Advanced Software Engineering) that provides real-time program analysis for TypeScript/JavaScript functions. It visualizes data flows as interactive Mermaid diagrams, estimates runtime complexity through dynamic execution, detects structural duplicates across the workspace, locates function usages, and generates natural-language summaries via LLM.",
     techs: ["TypeScript", "VS Code Extension API", "TypeScript Compiler API", "Chart.js", "Jest"],
     timeline: "February 2026 – April 2026",
     url: "",
@@ -72,8 +72,8 @@ const projects: Project[] = [
   },
   {
     title: "ParkShare",
-    subtitle: "ParkShare is a full-stack parking spot rental marketplace built at UBC BizTech's KickStart hackathon. Hosts can list available parking spaces with custom weekly availability schedules and hourly pricing, while renters search, browse, and book spots in real time through an interactive Google Maps interface. Users can manage bookings and listings from a personal dashboard.",
-    techs: ["React", "Next.js", "TypeScript", "TailwindCSS", "Python", "FastAPI", "Supabase"],
+    subtitle: "ParkShare is a full-stack parking spot rental marketplace built at UBC BizTech's KickStart 2025 hackathon. Hosts can list available parking spaces with custom weekly availability schedules and hourly pricing, while renters search, browse, and book spots in real time through an interactive Google Maps interface. Users can manage bookings and listings from a personal dashboard.",
+    techs: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Python", "FastAPI", "Supabase"],
     timeline: "November 2025",
     url: "",
     githubUrl: "https://github.com/connormorrrison/kickstart-project",
@@ -82,7 +82,7 @@ const projects: Project[] = [
   },
   {
     title: "ChecKin",
-    subtitle: "ChecKin is an AI-powered health check-in platform for elderly care. Caretakers set up loved ones as contacts and initiate daily check-ins via SMS. The elderly user taps a link and engages in a conversational health assessment with a real-time AI avatar. The system analyzes both the transcript and video for health concerns, tracks mood and urgency levels, sends automated emergency alerts, and provides caretakers with a dashboard of insights, session recordings, and follow-up management.",
+    subtitle: "ChecKin is an AI-powered health check-in platform for elderly care built at UBC BizTech's ProduHacks 2026 hackathon. Caretakers set up loved ones as contacts and initiate daily check-ins via SMS. The elderly user taps a link and engages in a conversational health assessment with a real-time AI avatar. The system analyzes both the transcript and video for health concerns, tracks mood and urgency levels, sends automated emergency alerts, and provides caretakers with a dashboard of insights, session recordings, and follow-up management.",
     techs: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui"],
     timeline: "March 2026",
     url: "",
@@ -92,8 +92,8 @@ const projects: Project[] = [
   },
   {
     title: "Jobnt",
-    subtitle: "Jobnt is a full-stack AI-powered job application tool built at nwPlus HackCamp that generates tailored resumes and cover letters. Users upload their resume as a PDF, paste a job description, and receive ATS-optimized documents as downloadable PDFs along with actionable improvement suggestions.",
-    techs: ["React", "Next.js", "TypeScript", "TailwindCSS", "Python", "Flask", "LaTeX"],
+    subtitle: "Jobnt is a full-stack AI-powered job application tool built at nwPlus HackCamp 2025 that generates tailored resumes and cover letters. Users upload their resume as a PDF, paste a job description, and receive ATS-optimized documents as downloadable PDFs along with actionable improvement suggestions.",
+    techs: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Python", "Flask", "LaTeX"],
     timeline: "November 2025",
     url: "",
     githubUrl: "https://github.com/connormorrrison/jobnt",
@@ -102,7 +102,7 @@ const projects: Project[] = [
   },
   {
     title: "InsightUBC",
-    subtitle: "InsightUBC is a full-stack academic data analysis tool and capstone project built for CPSC 310 (Introduction to Software Engineering). Users can upload datasets, run complex queries with filtering, grouping, and aggregation, and visualize insights such as average grades by course, pass/fail rates, and top-ranked professors through interactive charts.",
+    subtitle: "InsightUBC is a full-stack academic data analysis tool built as a capstone project for CPSC 310 (Introduction to Software Engineering). Users can upload datasets, run complex queries with filtering, grouping, and aggregation, and visualize insights such as average grades by course, pass/fail rates, and top-ranked professors through interactive charts.",
     techs: ["TypeScript", "React", "Vite", "Tailwind CSS", "Chart.js", "Node.js", "Express", "Mocha"],
     timeline: "September 2025 – December 2025",
     url: "",
@@ -112,24 +112,24 @@ const projects: Project[] = [
   },
   {
     title: "TradingDSL",
-    subtitle: "TradingDSL is a full-stack stock portfolio management app and capstone project built for CPSC 410 (Advanced Software Engineering). Users can buy and sell real stocks with virtual cash, build watchlists, execute complex queries with WHERE clauses and logical operators, define automated trading rules, and generate formatted portfolio reports, all through a custom domain-specific language and interactive browser-based terminal.",
+    subtitle: "TradingDSL is a full-stack stock portfolio management app built as a capstone project for CPSC 410 (Advanced Software Engineering). Users can buy and sell real stocks with virtual cash, build watchlists, execute complex queries with WHERE clauses and logical operators, define automated trading rules, and generate formatted portfolio reports, all through a custom domain-specific language and interactive browser-based terminal.",
     techs: ["React", "TypeScript", "Python", "Flask"],
     timeline: "February 2026",
     url: "",
     githubUrl: "",
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/watch?v=yzFsA2WR3FI",
     images: ["/images/projects/tradingdsl/tradingdsl-1.jpeg", "/images/projects/tradingdsl/tradingdsl-2.jpeg", "/images/projects/tradingdsl/tradingdsl-3.jpeg"],
   },
   {
     title: "Solomon",
-    subtitle: "Project description.",
+    subtitle: "Solomon is a full-stack trading bot that generates signals for cryptocurrency prediction markets and simulates execution against a virtual bankroll. A live dashboard tracks portfolio performance, active positions, and P&L with configurable risk controls.",
     underConstruction: true,
-    techs: ["Technology 1", "Technology 2", "Technology 3"],
-    timeline: "Date – Date",
-    url: "#",
-    githubUrl: "#",
-    videoUrl: "#",
-    images: [],
+    techs: ["React", "TypeScript", "Tailwind CSS", "Python", "FastAPI", "Polymarket API"],
+    timeline: "February 2025 – Present (In Development)",
+    url: "",
+    githubUrl: "https://github.com/connormorrrison/solomon",
+    videoUrl: "",
+    images: ["/images/projects/solomon/solomon-1.jpeg"],
   },
 ]
 
@@ -137,7 +137,7 @@ const skills = {
   languages: ["Python", "Java", "TypeScript", "C", "Rust", "Golang", "RISC-V"],
   frameworks: ["React", "Next.js", "Tailwind CSS", "FastAPI", "shadcn/ui"],
   libraries: ["pandas", "NumPy", "Matplotlib", "SciPy", "scikit-learn"],
-  developerTools: ["PostgreSQL", "Linux", "Bash", "Git", "Claude Code", "Docker", "Google Cloud Platform (GCP)", "Visual Studio", "IntelliJ"],
+  developerTools: ["PostgreSQL", "Linux", "Bash", "Git", "Claude Code", "Codex", "Docker", "Google Cloud Platform (GCP)", "Visual Studio", "IntelliJ"],
 }
 
 export default function Home() {
@@ -331,8 +331,8 @@ export default function Home() {
 
           <div className="flex flex-col" style={{ gap: '12px' }}>
             {projects.map((proj) => {
-              const hasImages = !proj.underConstruction && proj.images.length > 0
-              const hasLinks = !proj.underConstruction && (proj.githubUrl || proj.url || proj.videoUrl)
+              const hasImages = proj.images.length > 0
+              const hasLinks = proj.githubUrl || proj.url || proj.videoUrl
 
               return (
                 <Tile
@@ -353,7 +353,7 @@ export default function Home() {
                   {/* Title + timeline */}
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
                     <Text2>{proj.title}</Text2>
-                    <Text3 variant="muted" className="flex-shrink-0 whitespace-nowrap">{proj.timeline}</Text3>
+                    <Text3 variant="muted" className="flex-shrink-0">{proj.timeline}</Text3>
                   </div>
 
                   {/* Subtitle */}

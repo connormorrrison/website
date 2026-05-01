@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useEffect, useState, useCallback } from "react"
+import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import {
   Carousel,
@@ -55,9 +56,11 @@ export function ImageCarousel({ images, alt, onImageClick }: ImageCarouselProps)
                   aspectRatio: '16 / 10',
                 }}
               >
-                <img
+                <Image
                   src={src}
                   alt={`${alt} screenshot ${i + 1}`}
+                  width={1600}
+                  height={1000}
                   className="w-full h-full block cursor-zoom-in object-contain"
                   onClick={() => onImageClick?.(i)}
                 />
