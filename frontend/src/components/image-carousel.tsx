@@ -52,12 +52,13 @@ export function ImageCarousel({ images, alt, onImageClick }: ImageCarouselProps)
                 style={{
                   borderColor: 'light-dark(oklch(0.922 0 0), oklch(1 0 0 / 10%))',
                   background: 'light-dark(oklch(0.96 0 0), oklch(0.18 0 0))',
+                  aspectRatio: '16 / 10',
                 }}
               >
                 <img
                   src={src}
                   alt={`${alt} screenshot ${i + 1}`}
-                  className="w-full h-auto block cursor-zoom-in"
+                  className="w-full h-full block cursor-zoom-in object-contain"
                   onClick={() => onImageClick?.(i)}
                 />
               </div>
