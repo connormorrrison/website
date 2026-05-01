@@ -64,7 +64,7 @@ const projects: Project[] = [
     title: "CodeScope",
     subtitle: "CodeScope is a VS Code extension built as a capstone project for CPSC 410 (Advanced Software Engineering) that provides real-time program analysis for TypeScript/JavaScript functions. It visualizes data flows as interactive Mermaid diagrams, estimates runtime complexity through dynamic execution, detects structural duplicates across the workspace, locates function usages, and generates natural-language summaries via LLM.",
     techs: ["TypeScript", "VS Code Extension API", "TypeScript Compiler API", "Chart.js", "Jest"],
-    timeline: "February 2026 – April 2026",
+    timeline: "April 2026",
     url: "",
     githubUrl: "",
     videoUrl: "https://www.youtube.com/watch?v=nzqVAuRsM2A",
