@@ -37,48 +37,48 @@ const projects: Project[] = [
     subtitle: "MockTrade is a full-stack stock trading simulator where users practice buying and selling real stocks with virtual cash. Users can track portfolio performance through interactive charts, monitor market indices, build watchlists, and compete on a real-time leaderboard.",
     featured: true,
     techs: ["React", "TypeScript", "TailwindCSS", "Python", "FastAPI", "PostgreSQL"],
-    timeline: "Nov 2024 – Present",
+    timeline: "November 2024 – Present",
     url: "https://www.mocktrade.ca",
     githubUrl: "https://github.com/connormorrrison/mocktrade",
     videoUrl: "",
-    images: ["/images/projects/mocktrade/mocktrade-image-1.jpeg", "/images/projects/mocktrade/mocktrade-image-2.jpeg", "/images/projects/mocktrade/mocktrade-image-3.jpeg"],
+    images: ["/images/projects/mocktrade/mocktrade-1.jpeg", "/images/projects/mocktrade/mocktrade-2.jpeg", "/images/projects/mocktrade/mocktrade-3.jpeg"],
   },
   {
     title: "Benevity Automated Campaign Kits",
     subtitle: <>Capstone project for CPSC 319 (Software Engineering Project), built in partnership with <Text3 as="a" href="https://benevity.com/" target="_blank" rel="noopener noreferrer" className="hover:underline" variant="blue">Benevity</Text3>. An AI-powered platform that monitors global crises in real-time and generates donation campaign kits from verified news sources. Features LLM-powered event discovery, citation-grounded campaign copy generation via Gemini AI, Benevity API nonprofit matching, and a draft-to-publish workflow.</>,
     featured: true,
     techs: ["React", "TypeScript", "Tailwind CSS", "Python", "FastAPI", "PostgreSQL", "Google Vertex AI"],
-    timeline: "Jan 2026 – Apr 2026",
+    timeline: "January 2026 – April 2026",
     url: "",
     githubUrl: "",
     videoUrl: "https://youtu.be/HZ8bRtzengA?si=SV84M4Z5gHjKcsuE",
     images: [
-      "/images/projects/benevity/benevity-image-1.jpeg",
-      "/images/projects/benevity/benevity-image-2.jpeg",
-      "/images/projects/benevity/benevity-image-3.jpeg",
-      "/images/projects/benevity/benevity-image-4.jpeg",
-      "/images/projects/benevity/benevity-image-5.jpeg"
+      "/images/projects/benevity/benevity-1.jpeg",
+      "/images/projects/benevity/benevity-2.jpeg",
+      "/images/projects/benevity/benevity-3.jpeg",
+      "/images/projects/benevity/benevity-4.jpeg",
+      "/images/projects/benevity/benevity-5.jpeg"
     ],
   },
   {
     title: "CodeScope",
     subtitle: "CodeScope is a VS Code extension built as a capstone project for CPSC 410 (Advanced Software Engineering) that provides real-time program analysis for TypeScript/JavaScript functions. It visualizes data flows as interactive Mermaid diagrams, estimates runtime complexity through dynamic execution, detects structural duplicates across the workspace, locates function usages, and generates natural-language summaries via LLM.",
     techs: ["TypeScript", "VS Code Extension API", "TypeScript Compiler API", "Chart.js", "Jest"],
-    timeline: "Feb 2026 – Apr 2026",
+    timeline: "February 2026 – April 2026",
     url: "",
     githubUrl: "",
     videoUrl: "https://www.youtube.com/watch?v=nzqVAuRsM2A",
-    images: ["/images/projects/codescope/codescope-image-1.jpeg", "/images/projects/codescope/codescope-image-2.jpeg", "/images/projects/codescope/codescope-image-3.jpeg"],
+    images: ["/images/projects/codescope/codescope-1.jpeg", "/images/projects/codescope/codescope-2.jpeg", "/images/projects/codescope/codescope-3.jpeg"],
   },
   {
     title: "ParkShare",
-    subtitle: "Project description.",
-    techs: ["Technology 1", "Technology 2", "Technology 3"],
-    timeline: "Date – Date",
-    url: "#",
-    githubUrl: "#",
-    videoUrl: "#",
-    images: ["/images/projects/parkshare/picture-1.png", "/images/projects/parkshare/picture-2.png"],
+    subtitle: "ParkShare is a full-stack parking spot rental marketplace built at UBC BizTech's KickStart hackathon. Hosts can list available parking spaces with custom weekly availability schedules and hourly pricing, while renters search, browse, and book spots in real time through an interactive Google Maps interface. Users can manage bookings and listings from a personal dashboard.",
+    techs: ["React", "Next.js", "TypeScript", "TailwindCSS", "Python", "FastAPI", "Supabase"],
+    timeline: "November 2025",
+    url: "",
+    githubUrl: "https://github.com/connormorrrison/kickstart-project",
+    videoUrl: "https://www.youtube.com/watch?v=s0aw6kmadjw",
+    images: ["/images/projects/parkshare/parkshare-1.jpeg", "/images/projects/parkshare/parkshare-2.jpeg", "/images/projects/parkshare/parkshare-3.jpeg", "/images/projects/parkshare/parkshare-4.jpeg"],
   },
   {
     title: "ChecKin",
@@ -88,7 +88,7 @@ const projects: Project[] = [
     url: "#",
     githubUrl: "#",
     videoUrl: "#",
-    images: ["/images/projects/checkin/checkin-picture-1.jpeg", "/images/projects/checkin/checkin-picture-2.jpeg", "/images/projects/checkin/checkin-picture-3.jpeg", "/images/projects/checkin/checkin-picture-4.jpeg"],
+    images: ["/images/projects/checkin/checkin-1.jpeg", "/images/projects/checkin/checkin-2.jpeg", "/images/projects/checkin/checkin-3.jpeg", "/images/projects/checkin/checkin-4.jpeg"],
   },
   {
     title: "Jobnt",
@@ -98,7 +98,7 @@ const projects: Project[] = [
     url: "#",
     githubUrl: "#",
     videoUrl: "#",
-    images: ["/images/projects/jobnt/picture-1.png", "/images/projects/jobnt/picture-2.png"],
+    images: [],
   },
   {
     title: "InsightUBC",
@@ -286,11 +286,18 @@ export default function Home() {
 
           <div className="flex flex-wrap" style={{ gap: '12px' }}>
             <Tile>
-              <Text3>University of British Columbia</Text3>
+              <Text2>University of British Columbia</Text2>
               <Text3 as="p" variant="muted">Bachelor of Computer Science (BCS), Major in Computer Science (Co-op)</Text3>
+              <div className="flex flex-wrap mt-2" style={{ gap: '6px' }}>
+                <Badge text="Introduction to Software Engineering" />
+                <Badge text="Advanced Software Engineering" />
+                <Badge text="Software Engineering Project" />
+                <Badge text="Introduction to Computer Networking" />
+                <Badge text="Introduction to Artificial Intelligence" />
+              </div>
             </Tile>
             <Tile>
-              <Text3>University of Alberta</Text3>
+              <Text2>University of Alberta</Text2>
               <Text3 as="p" variant="muted">Bachelor of Commerce (BCom), Major in Finance</Text3>
             </Tile>
           </div>
