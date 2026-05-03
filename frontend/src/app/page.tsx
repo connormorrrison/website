@@ -12,6 +12,7 @@ import { Text3 } from "@/components/text-3"
 import { ImageLightbox } from "@/components/image-lightbox"
 import { ImageCarousel } from "@/components/image-carousel"
 import { CustomCursorEffect } from "@/components/custom-cursor-effect"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 import { scrollToSection } from "@/lib/scroll"
 import { Mail, Folder, User, MapPin, Plane } from "lucide-react"
@@ -539,6 +540,10 @@ export default function Home() {
         index={lightbox?.index ?? 0}
         onClose={() => setLightbox(null)}
       />
+
+      <div className="fixed bottom-6 right-6 z-[100] md:hidden">
+        <ThemeToggle />
+      </div>
 
     </div>
   )
