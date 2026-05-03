@@ -352,9 +352,9 @@ export default function Home() {
                   )}
 
                   {/* Title + timeline */}
-                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-1 md:gap-4">
                     <Text2>{proj.title}</Text2>
-                    <Text3 variant="muted" className="flex-shrink-0">{proj.timeline}</Text3>
+                    <Text3 variant="muted">{proj.timeline}</Text3>
                   </div>
 
                   {/* Subtitle */}
@@ -541,7 +541,7 @@ export default function Home() {
         onClose={() => setLightbox(null)}
       />
 
-      <div className="fixed bottom-6 right-6 z-[100] md:hidden">
+      <div className="fixed z-[100] md:hidden" style={{ bottom: '32px', right: '32px' }}>
         <ThemeToggle />
       </div>
 

@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               {children}
             </div>
           </main>
-          <div className="hidden md:block shrink-0" style={{ width: '192px' }} aria-hidden />
+          <div className="hidden md:block shrink-0" style={{ width: '176px' }} aria-hidden />
         </ThemeProvider>
       </body>
     </html>
