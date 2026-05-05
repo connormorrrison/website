@@ -42,7 +42,7 @@ const projects: Project[] = [
     url: "https://www.mocktrade.ca",
     githubUrl: "https://github.com/connormorrrison/mocktrade",
     videoUrl: "",
-    images: ["/images/projects/mocktrade/mocktrade-1.jpeg", "/images/projects/mocktrade/mocktrade-2.jpeg", "/images/projects/mocktrade/mocktrade-3.jpeg"],
+    images: ["/images/projects/mocktrade/mocktrade-1.jpeg", "/images/projects/mocktrade/mocktrade-2.jpeg", "/images/projects/mocktrade/mocktrade-3.jpeg", "/images/projects/mocktrade/mocktrade-4.jpeg", "/images/projects/mocktrade/mocktrade-5.jpeg", "/images/projects/mocktrade/mocktrade-6.jpeg"],
   },
   {
     title: "Benevity Automated Campaign Kits",
