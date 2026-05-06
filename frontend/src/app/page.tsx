@@ -45,8 +45,8 @@ const projects: Project[] = [
     images: ["/images/projects/mocktrade/mocktrade-1.jpeg", "/images/projects/mocktrade/mocktrade-2.jpeg", "/images/projects/mocktrade/mocktrade-3.jpeg", "/images/projects/mocktrade/mocktrade-4.jpeg", "/images/projects/mocktrade/mocktrade-5.jpeg", "/images/projects/mocktrade/mocktrade-6.jpeg"],
   },
   {
-    title: "Benevity Automated Campaign Kits",
-    subtitle: <>Benevity Automated Campaign Kits is a capstone project for CPSC 319 (Software Engineering Project), built in partnership with <Text3 as="a" href="https://benevity.com/" target="_blank" rel="noopener noreferrer" className="hover:underline" variant="blue">Benevity</Text3>. An AI-powered platform that monitors global crises in real-time and generates donation campaign kits from verified news sources. Features LLM-powered event discovery, citation-grounded campaign copy generation via Gemini AI, Benevity API nonprofit matching, and a draft-to-publish workflow.</>,
+    title: "Automated Campaign Kits",
+    subtitle: <>Automated Campaign Kits is a capstone project for CPSC 319 (Software Engineering Project), built in partnership with <Text3 as="a" href="https://benevity.com/" target="_blank" rel="noopener noreferrer" className="hover:underline" variant="blue">Benevity</Text3>. An AI-powered platform that monitors global crises in real-time and generates donation campaign kits from verified news sources. Features LLM-powered event discovery, citation-grounded campaign copy generation via Gemini AI, Benevity API nonprofit matching, and a draft-to-publish workflow.</>,
     featured: true,
     techs: ["React", "TypeScript", "Tailwind CSS", "Python", "FastAPI", "PostgreSQL", "Google Vertex AI", "Google Cloud Platform (GCP)"],
     timeline: "January 2026 – April 2026",
@@ -54,11 +54,11 @@ const projects: Project[] = [
     githubUrl: "",
     videoUrl: "https://youtu.be/HZ8bRtzengA?si=SV84M4Z5gHjKcsuE",
     images: [
-      "/images/projects/benevity/benevity-1.jpeg",
-      "/images/projects/benevity/benevity-2.jpeg",
-      "/images/projects/benevity/benevity-3.jpeg",
-      "/images/projects/benevity/benevity-4.jpeg",
-      "/images/projects/benevity/benevity-5.jpeg"
+      "/images/projects/automatedcampaignkits/automatedcampaignkits-1.jpeg",
+      "/images/projects/automatedcampaignkits/automatedcampaignkits-2.jpeg",
+      "/images/projects/automatedcampaignkits/automatedcampaignkits-3.jpeg",
+      "/images/projects/automatedcampaignkits/automatedcampaignkits-4.jpeg",
+      "/images/projects/automatedcampaignkits/automatedcampaignkits-5.jpeg"
     ],
   },
   {
