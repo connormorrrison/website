@@ -89,7 +89,7 @@ const projects: Project[] = [
     url: "",
     githubUrl: "https://github.com/daniel1lima/produhacks2026/tree/main",
     videoUrl: "https://www.youtube.com/watch?v=LIVM3QuymLA",
-    images: ["/images/projects/checkin/checkin-1.jpeg", "/images/projects/checkin/checkin-2.jpeg", "/images/projects/checkin/checkin-3.jpeg", "/images/projects/checkin/checkin-4.jpeg", "/images/projects/checkin/checkin-5.jpeg"],
+    images: ["/images/projects/checkin/checkin-1.jpeg", "/images/projects/checkin/checkin-2.jpeg", "/images/projects/checkin/checkin-3.jpeg", "/images/projects/checkin/checkin-4.jpeg", "/images/projects/checkin/checkin-5.jpeg", "/images/projects/checkin/checkin-6.jpeg"],
   },
   {
     title: "Jobnt",
