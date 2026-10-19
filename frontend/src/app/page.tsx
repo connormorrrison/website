@@ -255,11 +255,10 @@ export default function Home() {
               </li>
             </ul>
             <Text3 as="p" className="mt-2">
-              See my full reading list on{' '}
+              See my full reading list{' '}
               <Text3 as="a" href="https://www.goodreads.com/review/list/189513776?ref=nav_mybooks" target="_blank" rel="noopener noreferrer" className="hover:underline" variant="blue">
-                Goodreads
+                here
               </Text3>
-              .
             </Text3>
           </div>
 
