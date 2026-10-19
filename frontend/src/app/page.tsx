@@ -244,16 +244,23 @@ export default function Home() {
             <Text3 as="p">I&apos;m currently reading:</Text3>
             <ul className="list-disc list-outside pl-8 space-y-1 mt-1">
               <li>
-                <Text3 as="a" href="https://www.amazon.com/Boom-Bubbles-Stagnation-Byrne-Hobart/dp/1953953476" target="_blank" rel="noopener noreferrer" className="hover:underline" variant="blue">
-                  Boom: Bubbles and the End of Stagnation
+                <Text3 as="a" href="https://www.amazon.com/s?k=Mastering+Behavioral+Interviews+Austen+McDonald" target="_blank" rel="noopener noreferrer" className="hover:underline" variant="blue">
+                  Mastering Behavioral Interviews: The Guide to Storytelling in Tech
                 </Text3>
               </li>
               <li>
-                <Text3 as="a" href="https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850" target="_blank" rel="noopener noreferrer" className="hover:underline" variant="blue">
-                  Cracking the Coding Interview
+                <Text3 as="a" href="https://www.amazon.com/Superintelligence-Dangers-Strategies-Nick-Bostrom/dp/0198739834" target="_blank" rel="noopener noreferrer" className="hover:underline" variant="blue">
+                  Superintelligence: Paths, Dangers, Strategies
                 </Text3>
               </li>
             </ul>
+            <Text3 as="p" className="mt-2">
+              See my full reading list on{' '}
+              <Text3 as="a" href="https://www.goodreads.com/review/list/189513776?ref=nav_mybooks" target="_blank" rel="noopener noreferrer" className="hover:underline" variant="blue">
+                Goodreads
+              </Text3>
+              .
+            </Text3>
           </div>
 
           <div className="w-full">
