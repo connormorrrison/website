@@ -259,6 +259,7 @@ export default function Home() {
               <Text3 as="a" href="https://www.goodreads.com/review/list/189513776?ref=nav_mybooks" target="_blank" rel="noopener noreferrer" className="hover:underline" variant="blue">
                 here
               </Text3>
+              .
             </Text3>
           </div>
 
